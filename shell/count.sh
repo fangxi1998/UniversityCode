@@ -4,7 +4,7 @@ for((i=1;i<=50;i++))
 do
 	if ((i%7==0))
 	then 
-		let count=count+i
+		((count=count+i))
 		echo $i
 	fi
 done
