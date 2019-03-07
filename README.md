@@ -6,5 +6,6 @@
 # Shell Code
 > 整理了一些非常基础的Shell编程代码 
 
-
+# python Test
+> python 学习中的小测试代码 方便学习python
 
