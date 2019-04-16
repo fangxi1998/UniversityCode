@@ -39,5 +39,5 @@ for v in range(n):
     
         sum4=0
         st=list(str(sum3))
-	sum3=0
+    sum3=0
     print(t)
