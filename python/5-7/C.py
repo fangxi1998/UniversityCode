@@ -1,32 +1,51 @@
-import operator
-class person4:
+class person:
     
     
-    def __init__(self,Id,grade):
-        self.Id=Id
+    def __init__(self,Name,grade):
+        self.Name=Name
         self.grade=grade
+       
         
-n,m=map(int,input().split())
-f=[]
-
-for i in range(n):
-    a,b=map(int,input().split())
-   
     
-    f.append(person4(a,b))
-num=int(m*1.5)
-f.sort(key=operator.attrgetter('grade'),reverse=True)
-line=f[num-1].grade
-g=[]
+   
+
+
+a=[]
+n=int(input())
 
 for i in range(n):
-    if(f[i].grade>=line):
-        g.append(f[i])
+    b,c=map(str,input().split())
+    a.append(person(b,c))
+    
+
+        
+for i in range(0,n):
+    
+    for j in range(i+1,n):
+        if(a[j].grade>a[i].grade):
+            s=a[i].grade
+            a[i].grade=a[j].grade
+            a[j].grade=s
+
+            c=a[i].Name
+            a[i].Name=a[j].Name
+            a[j].Name=c
+        if (a[j].grade==a[i].grade and a[j].Name<a[i].Name):
 
 
-for i in range(len(g)-1):
-    if(g[i].grade==g[i+1].grade and g[i].Id>g[i+1].Id):
-        g[i],g[i+1]=g[i+1],g[i]
-print(line,len(g))
-for i in range(len(g)):
-    print(g[i].Id,g[i].grade)
+
+            s=a[i].grade
+            a[i].grade=a[j].grade
+            a[j].grade=s
+
+            c=a[i].Name
+            a[i].Name=a[j].Name
+            a[j].Name=c
+
+
+            
+      
+
+
+for i in range(n):
+    print(a[i].Name,a[i].grade)

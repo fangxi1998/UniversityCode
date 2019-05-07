@@ -1,10 +1,11 @@
-class person2:
+import operator
+class person3:
     
     
-    def __init__(self,Name,year,phone):
-        self.Name=Name
-        self.year=year
-        self.phone=phone
+    def __init__(self,Id,age):
+        self.Id=Id
+        self.age=age
+        
        
         
         
@@ -18,17 +19,28 @@ f=[]
 n=int(input())
 
 for i in range(n):
-    a,b,c=map(str,input().split())
+    a,b=map(str,input().split())
    
     
-    f.append(person2(a,b,c))
+    f.append(person3(a,b))
 
-for i in range(0,n):
+
     
-    for j in range(i+1,n):
-        if(f[j].year<f[i].year):
-            s=f[i]
-            f[i]=f[j]
-            f[j]=s
+
+g=[]
+h=[]
+
 for i in range(n):
-    print(f[i].Name,f[i].year,f[i].phone)
+    if(f[i].age>='60'):
+        g.append(f[i])
+    else:
+        h.append(f[i])
+
+
+g.sort(key=(operator.attrgetter('age')),reverse=True)
+#h.sort(key=(operator.attrgetter('age')),reverse=True)
+for i in range(len(g)):
+    print(g[i].Id)
+
+for i in range(len(h)):
+    print(h[i].Id)   

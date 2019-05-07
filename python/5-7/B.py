@@ -1,9 +1,9 @@
-class person:
+class book:
     
     
-    def __init__(self,Name,grade):
-        self.Name=Name
-        self.grade=grade
+    def __init__(self,bookName,price):
+        self.bookName=bookName
+        self.price=price
        
         
     
@@ -14,38 +14,28 @@ a=[]
 n=int(input())
 
 for i in range(n):
-    b,c=map(str,input().split())
-    a.append(person(b,c))
+    b=input()
+    c=float(input())
+    a.append(book(b,c))
     
-
-        
-for i in range(0,n):
-    
-    for j in range(i+1,n):
-        if(a[j].grade>a[i].grade):
-            s=a[i].grade
-            a[i].grade=a[j].grade
-            a[j].grade=s
-
-            c=a[i].Name
-            a[i].Name=a[j].Name
-            a[j].Name=c
-        if (a[j].grade==a[i].grade and a[j].Name<a[i].Name):
-
-
-
-            s=a[i].grade
-            a[i].grade=a[j].grade
-            a[j].grade=s
-
-            c=a[i].Name
-            a[i].Name=a[j].Name
-            a[j].Name=c
-
-
-            
-      
-
+max=a[0].price
+min=a[0].price
+maxi=0
+mini=0
 
 for i in range(n):
-    print(a[i].Name,a[i].grade)
+    
+    if(max<a[i].price):
+                
+        max=a[i].price
+        maxi=i
+        
+            
+                
+    if(min>a[i].price):
+                
+        min=a[i].price
+        mini=i
+        
+print('{:.2f},{}'.format(a[maxi].price,a[maxi].bookName))
+print('{:.2f},{}'.format(a[mini].price,a[mini].bookName))

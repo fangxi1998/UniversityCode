@@ -1,46 +1,32 @@
 import operator
-class person3:
+class person4:
     
     
-    def __init__(self,Id,age):
+    def __init__(self,Id,grade):
         self.Id=Id
-        self.age=age
+        self.grade=grade
         
-       
-        
-        
-       
-        
-    
-   
-
-
+n,m=map(int,input().split())
 f=[]
-n=int(input())
 
 for i in range(n):
-    a,b=map(str,input().split())
+    a,b=map(int,input().split())
    
     
-    f.append(person3(a,b))
-
-
-    
-
+    f.append(person4(a,b))
+num=int(m*1.5)
+f.sort(key=operator.attrgetter('grade'),reverse=True)
+line=f[num-1].grade
 g=[]
-h=[]
 
 for i in range(n):
-    if(f[i].age>='60'):
+    if(f[i].grade>=line):
         g.append(f[i])
-    else:
-        h.append(f[i])
 
 
-g.sort(key=(operator.attrgetter('age')),reverse=True)
-#h.sort(key=(operator.attrgetter('age')),reverse=True)
+for i in range(len(g)-1):
+    if(g[i].grade==g[i+1].grade and g[i].Id>g[i+1].Id):
+        g[i],g[i+1]=g[i+1],g[i]
+print(line,len(g))
 for i in range(len(g)):
-    print(g[i].Id)
-
-for i in range(len(h)):
-    print(h[i].Id)   
+    print(g[i].Id,g[i].grade)
