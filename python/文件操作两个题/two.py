@@ -48,4 +48,23 @@ writetofile(r'E:\student.txt',stls)
 stls1=readfromfile(r'E:\student.txt')
 for st in stls1:
     print(st)
+	 '''从键盘输入n个学生的信息：学号 姓名 数学 英语语文
+
+计算总分，并按总分从高到低排序，然后写入文件student.txt。最后从文件中读出信息并输出
+
+
+
+输入 样例：
+
+5
+
+201801 lifang 90 87 98
+
+201802 fang 100 78 89
+
+201803 lili 78 100 89
+
+201804 liuxiao 89 96 67
+
+201805 zhao 78 100 93'''
 
