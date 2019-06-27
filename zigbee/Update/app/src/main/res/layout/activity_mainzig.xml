@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".backup.MainzigActivity">
+
+    <TextView
+        android:id="@+id/wena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/wenb"
+        android:layout_alignBottom="@+id/wenb"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/wen1"
+        android:layout_toRightOf="@+id/wen1"
+        android:text="温度："
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/wenb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/shia"
+        android:layout_alignBottom="@+id/shia"
+        android:layout_toEndOf="@+id/wena"
+        android:layout_toRightOf="@+id/wena"
+        android:text="35℃"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/shia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/shib"
+        android:layout_alignBottom="@+id/shib"
+        android:layout_alignEnd="@+id/surface1"
+        android:layout_alignRight="@+id/surface1"
+        android:text="湿度："
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/shib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/shia"
+        android:layout_toRightOf="@+id/shia"
+        android:text="34％"
+        android:textSize="20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/wena"
+        android:background="#000" />
+    <TextView
+        android:id="@+id/f1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/wena"
+        android:layout_marginTop="15dp"
+        android:text="1号教室:"
+        android:textSize="20dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/f1"
+        android:text="温度 : "
+        android:id="@+id/wen1"
+        android:textSize="20dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="35 ℃"
+        android:textSize="20dp"
+        android:id="@+id/wen2"
+        android:layout_toRightOf="@id/wen1"
+        android:layout_below="@+id/f1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="光照 : "
+        android:id="@+id/shi"
+        android:layout_below="@+id/wen1"
+
+        android:textSize="20dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="34%"
+        android:textSize="20dp"
+        android:layout_below="@+id/wen1"
+        android:id="@+id/light"
+        android:layout_toRightOf="@+id/shi"/>
+
+    <TextView
+        android:id="@+id/smog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/people"
+        android:layout_alignStart="@+id/people"
+        android:layout_below="@+id/people"
+        android:text="有烟雾"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/fire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/people"
+        android:layout_alignLeft="@+id/people"
+        android:layout_alignStart="@+id/people"
+        android:text="有火焰"
+        android:textSize="20dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/wen2"
+
+        android:text="有人"
+        android:id="@+id/people"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/f1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/f2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="6dp"
+        android:background="#000" />
+    <TextView
+        android:id="@+id/f2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/fire1"
+        android:layout_alignBottom="@+id/fire1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="2号教室:"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/f2"
+        android:text="温度 : "
+        android:id="@+id/wen3"
+        android:textSize="20dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="35 ℃"
+        android:textSize="20dp"
+        android:id="@+id/wen4"
+        android:layout_toRightOf="@id/wen3"
+        android:layout_below="@+id/f2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="光照 : "
+        android:id="@+id/light1"
+        android:layout_below="@+id/wen3"
+
+        android:textSize="20dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="34%"
+        android:textSize="20dp"
+        android:layout_below="@+id/wen3"
+        android:id="@+id/light2"
+        android:layout_toRightOf="@+id/shi"/>
+
+    <TextView
+        android:id="@+id/smog1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/smog"
+        android:layout_alignStart="@+id/smog"
+        android:layout_below="@+id/wen4"
+        android:text="有烟雾"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/fire1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/people1"
+        android:layout_alignStart="@+id/people1"
+        android:layout_below="@+id/smog"
+        android:layout_marginTop="18dp"
+        android:text="有火焰"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/people1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/people"
+        android:layout_alignStart="@+id/people"
+        android:layout_below="@+id/f2"
+        android:text="有人"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/beep1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_above="@+id/smog"
+        android:layout_alignLeft="@+id/shia"
+        android:layout_alignStart="@+id/shia"
+        android:text="发出警报" />
+
+    <Button
+        android:id="@+id/beep2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@+id/people1"
+        android:layout_alignBottom="@+id/people1"
+        android:layout_alignLeft="@+id/beep1"
+        android:layout_alignStart="@+id/beep1"
+        android:text="发出警报" />
+
+    <Button
+        android:id="@+id/btn_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_down"
+        android:layout_alignStart="@+id/btn_down"
+        android:layout_alignTop="@+id/surface1"
+        android:layout_marginTop="31dp"
+        android:text="UP" />
+
+    <Button
+        android:id="@+id/btn_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_up"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="42dp"
+        android:layout_toEndOf="@+id/surface1"
+        android:layout_toRightOf="@+id/surface1"
+        android:text="DOWN" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/light1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:background="#000"
+        android:id="@+id/view3" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/smog1"
+        android:layout_alignRight="@+id/smog1"
+        android:layout_below="@+id/view3"
+        android:layout_marginTop="22dp"
+        android:text="视频缩略图"
+        android:textSize="20dp" />
+
+    <SurfaceView
+
+        android:id="@+id/surface1"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="11dp" />
+
+    <Button
+        android:id="@+id/btn_led1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/beep1"
+        android:layout_alignBottom="@+id/beep1"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:text="开灯" />
+
+    <Button
+        android:id="@+id/btn_led2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/beep2"
+        android:layout_alignBottom="@+id/beep2"
+        android:layout_alignLeft="@+id/btn_led1"
+        android:layout_alignStart="@+id/btn_led1"
+        android:text="开灯" />
+
+
+</RelativeLayout>

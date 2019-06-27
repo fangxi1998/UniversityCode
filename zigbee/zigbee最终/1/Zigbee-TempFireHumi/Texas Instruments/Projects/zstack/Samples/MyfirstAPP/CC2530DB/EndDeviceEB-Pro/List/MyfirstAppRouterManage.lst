@@ -1,0 +1,1031 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         16/Dec/2014  18:18:10 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  E:\Zigbee-timer\Texas Instruments\Projects\zstack\ #
+#                          Samples\MyfirstAPP\Source\MyfirstAppRouterManage.c #
+#    Command line       =  -f "E:\Zigbee-timer\Texas                          #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"        #
+#                          (-DCPU32MHZ -DROOT=__near_func -DBLINK_LEDS) -f    #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\Tools\CC2530 #
+#                          DB\f8wConfig.cfg" (-DSECURE=0                      #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x02000000                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xA1B2                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\Source\MyfirstAppRouterManage. #
+#                          c" -D ZIGBEEPRO -D NWK_AUTO_POLL -D ZTOOL_P1 -D    #
+#                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
+#                          LCD_SUPPORTED=DEBUG -D xPOWER_SAVING -lC           #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\EndDeviceEB-Pro\List\ #
+#                          " -lA "E:\Zigbee-timer\Texas                       #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\EndDeviceEB-Pro\List\" --diag_suppress       #
+#                          Pe001,Pa010 -o "E:\Zigbee-timer\Texas              #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\EndDeviceEB-Pro\Obj\" -e --debug             #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 8 -I "E:\Zigbee-timer\Texas      #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\" -I "E:\Zigbee-timer\Texas                  #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\SOURCE\" -I "E:\Zigbee-timer\Texas        #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\ZMAIN\TI2530DB\" -I                 #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\MT\" -I "E:\Zigbee-timer\Texas                #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\HAL\INCLUDE\" -I   #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\HAL\TARGET\CC2530EB\" -I                      #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\OSAL\MCU\CCSOC\" -I "E:\Zigbee-timer\Texas    #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\OSAL\INCLUDE\" -I  #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\STACK\AF\" -I "E:\Zigbee-timer\Texas          #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\STACK\NWK\" -I     #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\STACK\SEC\" -I "E:\Zigbee-timer\Texas         #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\" -I    #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\STACK\SYS\" -I "E:\Zigbee-timer\Texas         #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\" -I     #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\ZMAC\F8W\" -I "E:\Zigbee-timer\Texas          #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\ZMAC\" -I          #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\SERVICES\SADDR\" -I "E:\Zigbee-timer\Texas    #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\SERVICES\SDATA\"   #
+#                          -I "E:\Zigbee-timer\Texas                          #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\MAC\INCLUDE\" -I   #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\MAC\HIGH_LEVEL\" -I "E:\Zigbee-timer\Texas    #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\MAC\LOW_LEVEL\srf0 #
+#                          4\" -I "E:\Zigbee-timer\Texas                      #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\MAC\LOW_LEVEL\srf0 #
+#                          4\SINGLE_CHIP\" -Ohz --require_prototypes          #
+#    List file          =  E:\Zigbee-timer\Texas Instruments\Projects\zstack\ #
+#                          Samples\MyfirstAPP\CC2530DB\EndDeviceEB-Pro\List\M #
+#                          yfirstAppRouterManage.lst                          #
+#    Object file        =  E:\Zigbee-timer\Texas Instruments\Projects\zstack\ #
+#                          Samples\MyfirstAPP\CC2530DB\EndDeviceEB-Pro\Obj\My #
+#                          firstAppRouterManage.r51                           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+E:\Zigbee-timer\Texas Instruments\Projects\zstack\Samples\MyfirstAPP\Source\MyfirstAppRouterManage.c
+      1          #include "OSAL_MyfirstAppRouter.h"
+      2          #include "MyfirstApp.h"
+      3          #include "OnBoard.h"
+
+   \                                 In  segment SFR_AN, at 0xa0
+   \   union <unnamed> volatile __sfr _A_P2
+   \                     _A_P2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xff
+   \   unsigned char volatile __sfr P2DIR
+   \                     P2DIR:
+   \   000000                DS 1
+      4          #include "hal_led.h"
+      5          #include "DS18B20.h"
+      6          #include "Light.h"
+      7          #include "fire.h"
+      8          #include "SHT10.h"
+      9          #include "Basic.h"
+     10          
+     11          #define  myID 1
+     12          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     13          byte     My_TaskID;
+   \                     My_TaskID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     14          uint8    TransID = 0;
+   \                     TransID:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     15          uint8    tmp_msg[7];
+   \                     tmp_msg:
+   \   000000                DS 7
+   \   000007                REQUIRE __INIT_XDATA_Z
+     16          //uint8    light_data[2]; 
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     17          uint8    light=0;
+   \                     light:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     18          
+     19          //volatile static 
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     20          uint8 temperature=0, humi=0;
+   \                     temperature:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+   \                     humi:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     21          uint16 uTempValue, uHumiValue;
+   \                     uTempValue:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+   \                     uHumiValue:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     22          float fTempValue, fHumiValue;
+   \                     fTempValue:
+   \   000000                DS 4
+   \   000004                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+   \                     fHumiValue:
+   \   000000                DS 4
+   \   000004                REQUIRE __INIT_XDATA_Z
+     23          
+     24          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     25          uint8    fire1=0;
+   \                     fire1:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     26          afAddrType_t   multi_DstAddr;
+   \                     multi_DstAddr:
+   \   000000                DS 12
+   \   00000C                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     27          afAddrType_t   Single_DstAddr;
+   \                     Single_DstAddr:
+   \   000000                DS 12
+   \   00000C                REQUIRE __INIT_XDATA_Z
+     28          
+     29          //存了当前节点的网络状态，我们将他初始化为'未加入网'
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     30          devStates_t  NwkState = DEV_INIT;
+   \                     NwkState:
+   \   000000                DS 1
+   \   000001                REQUIRE `?<Initializer for NwkState>`
+   \   000001                REQUIRE __INIT_XDATA_I
+     31          
+     32          void My_Task_Process_MSG ( afIncomingMSGPacket_t *msg );
+     33          void Send_Message(void);
+     34          
+     35          //*************************************************
+     36          //此任务的端点描述，它定义了此任务作为 ZigBee 应用程序对象的所有信息
+     37          //我们将会在初始化函数中为它赋值。然后将他注册到应用程序框架中。
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     38          endPointDesc_t   My_EndPoint_Desc;
+   \                     My_EndPoint_Desc:
+   \   000000                DS 6
+   \   000006                REQUIRE __INIT_XDATA_Z
+     39          
+     40          
+     41          //保存了一个簇 ID 的列表 ， 所有有关于此任务的簇都需要在此定义
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     42          const uint16 My_InCluster_List[MY_ENDPOINT_MAX_OUTCLUSTERS] =
+   \                     My_InCluster_List:
+   \   000000   0300         DW 3
+   \   000002   0400         DW 4
+     43          { 
+     44            CLUSTER_1_ID,
+     45            CLUSTER_2_ID
+     46          };
+     47          
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     48          const uint16 My_OutCluster_List[MY_ENDPOINT_MAX_INCLUSTERS] =
+   \                     My_OutCluster_List:
+   \   000000   0300         DW 3
+   \   000002   0400         DW 4
+     49          { 
+     50            CLUSTER_1_ID,
+     51            CLUSTER_2_ID
+     52          };
+     53          
+     54          //此端点的简单描述，它保存了此任务的一些基本信息
+
+   \                                 In  segment XDATA_ROM_C, align 1
+     55          const SimpleDescriptionFormat_t    My_EndPoint_SimpleDesc  =
+   \                     My_EndPoint_SimpleDesc:
+   \   000000   0F           DB 15
+   \   000001   070F         DW 3847
+   \   000003   0200         DW 2
+   \   000005   00           DB 0
+   \   000006   02           DB 2
+   \   000007   ....         DW My_InCluster_List
+   \   000009   02           DB 2
+   \   00000A   ....         DW My_OutCluster_List
+     56          {
+     57               MY_ENDPOINT_NO,
+     58               MY_ENDPOINT_PROFID,
+     59               MY_ENDPOINT_DEVICEID,
+     60               MY_ENDPOINT_DEVICE_VERSION,
+     61               MY_ENDPOINT_FLAGS,
+     62               MY_ENDPOINT_MAX_INCLUSTERS,
+     63               (uint16*)My_InCluster_List,
+     64               MY_ENDPOINT_MAX_OUTCLUSTERS,
+     65               (uint16*)My_OutCluster_List
+     66          };
+     67               
+     68          
+     69          //********************************************************
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     70          void My_Task_Init( byte task_id )
+   \                     My_Task_Init:
+     71          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+     72            
+     73              My_TaskID = task_id;
+   \   000006   90....       MOV     DPTR,#My_TaskID
+   \   000009   F0           MOVX    @DPTR,A
+     74          
+     75              //设置单播信息
+     76              Single_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
+   \   00000A   90....       MOV     DPTR,#Single_DstAddr + 8
+   \   00000D   7402         MOV     A,#0x2
+   \   00000F   F0           MOVX    @DPTR,A
+     77              Single_DstAddr.endPoint = MY_ENDPOINT_NO;
+   \   000010   A3           INC     DPTR
+   \   000011   740F         MOV     A,#0xf
+   \   000013   F0           MOVX    @DPTR,A
+     78              Single_DstAddr.addr.shortAddr = 0x0000;//协调器默认短地址为0x0000
+   \   000014   90....       MOV     DPTR,#Single_DstAddr
+   \   000017   E4           CLR     A
+   \   000018   F0           MOVX    @DPTR,A
+   \   000019   A3           INC     DPTR
+   \   00001A   F0           MOVX    @DPTR,A
+     79              
+     80              My_EndPoint_Desc.endPoint = MY_ENDPOINT_NO;
+   \   00001B   90....       MOV     DPTR,#My_EndPoint_Desc
+   \   00001E   740F         MOV     A,#0xf
+   \   000020   F0           MOVX    @DPTR,A
+     81              My_EndPoint_Desc.task_id = &My_TaskID;
+   \   000021   A3           INC     DPTR
+   \   000022   74..         MOV     A,#My_TaskID & 0xff
+   \   000024   F0           MOVX    @DPTR,A
+   \   000025   A3           INC     DPTR
+   \   000026   74..         MOV     A,#(My_TaskID >> 8) & 0xff
+   \   000028   F0           MOVX    @DPTR,A
+     82              My_EndPoint_Desc.simpleDesc = 
+     83                  (SimpleDescriptionFormat_t*)&My_EndPoint_SimpleDesc;
+   \   000029   A3           INC     DPTR
+   \   00002A   74..         MOV     A,#My_EndPoint_SimpleDesc & 0xff
+   \   00002C   F0           MOVX    @DPTR,A
+   \   00002D   A3           INC     DPTR
+   \   00002E   74..         MOV     A,#(My_EndPoint_SimpleDesc >> 8) & 0xff
+   \   000030   F0           MOVX    @DPTR,A
+     84              My_EndPoint_Desc.latencyReq = noLatencyReqs;
+   \   000031   A3           INC     DPTR
+   \   000032   E4           CLR     A
+   \   000033   F0           MOVX    @DPTR,A
+     85          
+     86              afRegister(&My_EndPoint_Desc);
+   \   000034                ; Setup parameters for call to function afRegister
+   \   000034   7A..         MOV     R2,#My_EndPoint_Desc & 0xff
+   \   000036   7B..         MOV     R3,#(My_EndPoint_Desc >> 8) & 0xff
+   \   000038   12....       LCALL   ??afRegister?relay
+     87              
+     88              
+     89          }
+   \   00003B   7F01         MOV     R7,#0x1
+   \   00003D   02....       LJMP    ?BANKED_LEAVE_XDATA
+     90          
+     91          //**********************************************************
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     92          UINT16 My_Task_Process_Event(byte task_id,UINT16 events)
+   \                     My_Task_Process_Event:
+     93          {    
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+   \   000007   EB           MOV     A,R3
+   \   000008   FF           MOV     R7,A
+     94              //当一个消息被发送给任务时,SYS_EVENT_MSG,事件会被传递给任务 
+     95            
+     96              //表示有一个消息等待处理。
+     97              afIncomingMSGPacket_t *MSGpkt;
+     98              if ( events & SYS_EVENT_MSG )
+   \   000009   5480         ANL     A,#0x80
+   \   00000B   605B         JZ      ??My_Task_Process_Event_0
+     99              {
+    100                  //从消息队列中取出消息
+    101                  MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive(My_TaskID);
+   \   00000D                ; Setup parameters for call to function osal_msg_receive
+   \   00000D   800E         SJMP    ??My_Task_Process_Event_1
+    102                  while ( MSGpkt )
+    103                  {
+    104                      switch ( MSGpkt->hdr.event )
+    105                      {
+    106                          /*
+    107                          当设备成功加入网络以后， ZigBee 设备对象（ZDO）会给所有已经在应用程序框架中注册过的任务
+    108                          （也就是作为 ZigBee 的应用程序对象存在的任务）发送一个ZDO_STATE_CHANGE消息，消息的状
+    109                          态指示了当前网络的状态。
+    110                          */
+    111                      case ZDO_STATE_CHANGE://网络状态改变事件
+    112                           NwkState = (devStates_t)MSGpkt->hdr.status;
+    113                          if ( NwkState == DEV_END_DEVICE || NwkState == DEV_ROUTER )
+    114                          {  
+    115                              osal_start_timerEx(My_TaskID, TMP_MSG_EVT_ID, 4000);
+    116                              osal_start_timerEx(My_TaskID, FIRE_MSG_EVT_ID, 1000);//开启OSAL定时器，定时检测火焰标志
+    117                          }
+    118                          break;
+    119                      case AF_INCOMING_MSG_CMD:  //模块接收到数据信息事件
+    120                           My_Task_Process_MSG( MSGpkt );
+   \                     ??My_Task_Process_Event_2:
+   \   00000F                ; Setup parameters for call to function My_Task_Process_MSG
+   \   00000F   AA..         MOV     R2,?V0 + 0
+   \   000011   AB..         MOV     R3,?V0 + 1
+   \   000013   12....       LCALL   ??My_Task_Process_MSG?relay
+    121                           break;
+    122                           
+    123                      case KEY_CHANGE://按键事件
+    124                         
+    125                          break;
+    126                     
+    127                      default:
+    128                          break;
+    129                      }
+    130                      //释放消息所在的消息缓冲区
+    131                      osal_msg_deallocate( (uint8 *)MSGpkt );
+   \                     ??My_Task_Process_Event_3:
+   \   000016                ; Setup parameters for call to function osal_msg_deallocate
+   \   000016   AA..         MOV     R2,?V0 + 0
+   \   000018   AB..         MOV     R3,?V0 + 1
+   \   00001A   12....       LCALL   ??osal_msg_deallocate?relay
+    132                      MSGpkt = (afIncomingMSGPacket_t*)osal_msg_receive(My_TaskID);
+   \   00001D                ; Setup parameters for call to function osal_msg_receive
+   \                     ??My_Task_Process_Event_1:
+   \   00001D   90....       MOV     DPTR,#My_TaskID
+   \   000020   E0           MOVX    A,@DPTR
+   \   000021   F9           MOV     R1,A
+   \   000022   12....       LCALL   ??osal_msg_receive?relay
+   \   000025   8A..         MOV     ?V0 + 0,R2
+   \   000027   8B..         MOV     ?V0 + 1,R3
+   \   000029   E5..         MOV     A,?V0 + 0
+   \   00002B   45..         ORL     A,?V0 + 1
+   \   00002D   6030         JZ      ??My_Task_Process_Event_4
+   \   00002F   85..82       MOV     DPL,?V0 + 0
+   \   000032   85..83       MOV     DPH,?V0 + 1
+   \   000035   E0           MOVX    A,@DPTR
+   \   000036   24E6         ADD     A,#-0x1a
+   \   000038   60D5         JZ      ??My_Task_Process_Event_2
+   \   00003A   2449         ADD     A,#0x49
+   \   00003C   70D8         JNZ     ??My_Task_Process_Event_3
+   \   00003E   A3           INC     DPTR
+   \   00003F   E0           MOVX    A,@DPTR
+   \   000040   90....       MOV     DPTR,#NwkState
+   \   000043   F0           MOVX    @DPTR,A
+   \   000044   6406         XRL     A,#0x6
+   \   000046   6005         JZ      ??My_Task_Process_Event_5
+   \   000048   E0           MOVX    A,@DPTR
+   \   000049   6407         XRL     A,#0x7
+   \   00004B   70C9         JNZ     ??My_Task_Process_Event_3
+   \                     ??My_Task_Process_Event_5:
+   \   00004D                ; Setup parameters for call to function osal_start_timerEx
+   \   00004D   7CA0         MOV     R4,#-0x60
+   \   00004F   7D0F         MOV     R5,#0xf
+   \   000051   12....       LCALL   ?Subroutine1 & 0xFFFF
+   \                     ??CrossCallReturnLabel_2:
+   \   000054                ; Setup parameters for call to function osal_start_timerEx
+   \   000054   7CE8         MOV     R4,#-0x18
+   \   000056   7D03         MOV     R5,#0x3
+   \   000058   7A08         MOV     R2,#0x8
+   \   00005A   12....       LCALL   ??Subroutine3_0 & 0xFFFF
+    133                  }
+   \                     ??CrossCallReturnLabel_4:
+   \   00005D   80B7         SJMP    ??My_Task_Process_Event_3
+    134                  
+    135                  return (events ^ SYS_EVENT_MSG);
+   \                     ??My_Task_Process_Event_4:
+   \   00005F   EE           MOV     A,R6
+   \   000060   FA           MOV     R2,A
+   \   000061   EF           MOV     A,R7
+   \   000062   6480         XRL     A,#0x80
+   \                     ??My_Task_Process_Event_6:
+   \   000064   FB           MOV     R3,A
+   \   000065   02....       LJMP    ??My_Task_Process_Event_7 & 0xFFFF
+    136              }
+    137              
+    138              //发送温度值的事件
+    139            if(events & TMP_MSG_EVT_ID)  
+   \                     ??My_Task_Process_Event_0:
+   \   000068   EE           MOV     A,R6
+   \   000069   A2E0         MOV     C,0xE0 /* A   */.0
+   \   00006B   4003         JC      $+5
+   \   00006D   02....       LJMP    ??My_Task_Process_Event_8 & 0xFFFF
+    140              {
+    141                  DS18B20_SendConvert();
+   \   000070                ; Setup parameters for call to function DS18B20_SendConvert
+   \   000070   12....       LCALL   ??DS18B20_SendConvert?relay
+    142                  DS18B20_GetTem();
+   \   000073                ; Setup parameters for call to function DS18B20_GetTem
+   \   000073   12....       LCALL   ??DS18B20_GetTem?relay
+    143                  tmp_msg[0] = myID;
+   \   000076   90....       MOV     DPTR,#tmp_msg
+   \   000079   7401         MOV     A,#0x1
+   \   00007B   F0           MOVX    @DPTR,A
+    144                  tmp_msg[1] = sensor_data_value[1];
+   \   00007C   90....       MOV     DPTR,#sensor_data_value + 1
+   \   00007F   E0           MOVX    A,@DPTR
+   \   000080   90....       MOV     DPTR,#tmp_msg + 1
+   \   000083   F0           MOVX    @DPTR,A
+    145                  tmp_msg[2] = sensor_data_value[0];
+   \   000084   90....       MOV     DPTR,#sensor_data_value
+   \   000087   E0           MOVX    A,@DPTR
+   \   000088   90....       MOV     DPTR,#tmp_msg + 2
+   \   00008B   F0           MOVX    @DPTR,A
+    146                  
+    147                   //采集光照度
+    148                  InitialAD();
+   \   00008C                ; Setup parameters for call to function InitialAD
+   \   00008C   12....       LCALL   ??InitialAD?relay
+    149                  light=Light_GetAdc();     
+   \   00008F                ; Setup parameters for call to function Light_GetAdc
+   \   00008F   12....       LCALL   ??Light_GetAdc?relay
+   \   000092   E9           MOV     A,R1
+   \   000093   90....       MOV     DPTR,#light
+   \   000096   F0           MOVX    @DPTR,A
+    150                 // tmp_msg[3] = 0x33;
+    151                  tmp_msg[3] = light;
+   \   000097   90....       MOV     DPTR,#tmp_msg + 3
+   \   00009A   F0           MOVX    @DPTR,A
+    152                  
+    153                   //采集火焰数据
+    154                   //io_init();
+    155                   //fire1=getfire();
+    156                   //setfire0();
+    157                   //fire_data[0]=fire1;
+    158                   tmp_msg[4] = fire1;
+   \   00009B   90....       MOV     DPTR,#fire1
+   \   00009E   E0           MOVX    A,@DPTR
+   \   00009F   90....       MOV     DPTR,#tmp_msg + 4
+   \   0000A2   F0           MOVX    @DPTR,A
+    159                   
+    160                   //采集湿度数据
+    161                   SHT10_init(1);
+   \   0000A3                ; Setup parameters for call to function SHT10_init
+   \   0000A3   7A01         MOV     R2,#0x1
+   \   0000A5   7B00         MOV     R3,#0x0
+   \   0000A7   12....       LCALL   ??SHT10_init?relay
+    162                  //读取温度值
+    163                  SHT10_Measure( &uTempValue, 0, TEMPERATURE );
+   \   0000AA                ; Setup parameters for call to function SHT10_Measure
+   \   0000AA   7901         MOV     R1,#0x1
+   \   0000AC   7C00         MOV     R4,#0x0
+   \   0000AE   7D00         MOV     R5,#0x0
+   \   0000B0   7A..         MOV     R2,#uTempValue & 0xff
+   \   0000B2   7B..         MOV     R3,#(uTempValue >> 8) & 0xff
+   \   0000B4   12....       LCALL   ??SHT10_Measure?relay
+    164                  SHT10_Measure( &uHumiValue, 0, HUMIDITY);
+   \   0000B7                ; Setup parameters for call to function SHT10_Measure
+   \   0000B7   7902         MOV     R1,#0x2
+   \   0000B9   7C00         MOV     R4,#0x0
+   \   0000BB   7D00         MOV     R5,#0x0
+   \   0000BD   7A..         MOV     R2,#uHumiValue & 0xff
+   \   0000BF   7B..         MOV     R3,#(uHumiValue >> 8) & 0xff
+   \   0000C1   12....       LCALL   ??SHT10_Measure?relay
+    165                  //温湿度传感器线性度系数校准
+    166                  fTempValue = SHT10_Calculate(uTempValue, TEMPERATURE);
+   \   0000C4                ; Setup parameters for call to function SHT10_Calculate
+   \   0000C4   7901         MOV     R1,#0x1
+   \   0000C6   90....       MOV     DPTR,#uTempValue
+   \   0000C9   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_0:
+   \   0000CC   90....       MOV     DPTR,#fTempValue
+   \   0000CF   12....       LCALL   ?XSTORE_R2345
+    167                  fHumiValue = SHT10_Calculate(uHumiValue, HUMIDITY);
+   \   0000D2                ; Setup parameters for call to function SHT10_Calculate
+   \   0000D2   7902         MOV     R1,#0x2
+   \   0000D4   90....       MOV     DPTR,#uHumiValue
+   \   0000D7   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_1:
+   \   0000DA   90....       MOV     DPTR,#fHumiValue
+   \   0000DD   12....       LCALL   ?XSTORE_R2345
+    168                  //temp = (uint16)(fTempValue );
+    169                  
+    170                  humi = (uint8)((uint16)(fHumiValue));
+   \   0000E0   90....       MOV     DPTR,#fHumiValue
+   \   0000E3   12....       LCALL   ?XLOAD_R2345
+   \   0000E6   12....       LCALL   ?R2345_FLT_TO_L
+   \   0000E9   E5..         MOV     A,?V0 + 0
+   \   0000EB   90....       MOV     DPTR,#humi
+   \   0000EE   F0           MOVX    @DPTR,A
+    171                  
+    172                  tmp_msg[5] =humi;
+   \   0000EF   90....       MOV     DPTR,#tmp_msg + 5
+   \   0000F2   F0           MOVX    @DPTR,A
+    173                  tmp_msg[6] = 0x55;
+   \   0000F3   A3           INC     DPTR
+   \   0000F4   7455         MOV     A,#0x55
+   \   0000F6   F0           MOVX    @DPTR,A
+    174                  
+    175                  Send_Message();
+   \   0000F7                ; Setup parameters for call to function Send_Message
+   \   0000F7   12....       LCALL   ??Send_Message?relay
+    176                  HalLedBlink(HAL_LED_1,3,50,300);
+   \   0000FA                ; Setup parameters for call to function HalLedBlink
+   \   0000FA   7C2C         MOV     R4,#0x2c
+   \   0000FC   7D01         MOV     R5,#0x1
+   \   0000FE   7B32         MOV     R3,#0x32
+   \   000100   7A03         MOV     R2,#0x3
+   \   000102   7901         MOV     R1,#0x1
+   \   000104   12....       LCALL   ??HalLedBlink?relay
+    177                  osal_start_timerEx(My_TaskID, TMP_MSG_EVT_ID, (2000+myID) );
+   \   000107                ; Setup parameters for call to function osal_start_timerEx
+   \   000107   7CD1         MOV     R4,#-0x2f
+   \   000109   7D07         MOV     R5,#0x7
+   \   00010B   12....       LCALL   ?Subroutine1 & 0xFFFF
+    178                  
+    179                  return (events ^ TMP_MSG_EVT_ID);
+   \                     ??CrossCallReturnLabel_3:
+   \   00010E   EE           MOV     A,R6
+   \   00010F   6401         XRL     A,#0x1
+   \                     ??My_Task_Process_Event_9:
+   \   000111   FA           MOV     R2,A
+   \   000112   EF           MOV     A,R7
+   \   000113   02....       LJMP    ??My_Task_Process_Event_6 & 0xFFFF
+    180              }
+    181              
+    182          /*    //发送光照度值的事件（和上面发送温度的代码分属两个不同的节点.下载到哪个节点注释掉哪一部分）
+    183              
+    184          if(events & LIGHT_MSG_EVT_ID)  
+    185              {
+    186                  InitialAD();
+    187                  light=Light_GetAdc();
+    188                  //light_data[0]=(light>>8)&0xff;
+    189                 //light_data[1]=(light)&0xff;
+    190                          
+    191                  tmp_msg[0] = myID;
+    192                  tmp_msg[1] = 0x33;
+    193                  tmp_msg[2] = light;
+    194                  Send_Message();
+    195                  HalLedBlink(HAL_LED_2,3,50,300);
+    196                  osal_start_timerEx(My_TaskID, LIGHT_MSG_EVT_ID, (3000+myID) );
+    197                  
+    198                  return (events ^ LIGHT_MSG_EVT_ID);
+    199              }
+    200           */   
+    201              
+    202              
+    203              
+    204              
+    205              
+    206               //发送火焰传感器数据的事件
+    207             if(events & FIRE_MSG_EVT_ID)  
+   \                     ??My_Task_Process_Event_8:
+   \   000116   5408         ANL     A,#0x8
+   \   000118   6026         JZ      ??My_Task_Process_Event_10
+    208              {
+    209                   io_init();
+   \   00011A                ; Setup parameters for call to function io_init
+   \   00011A   12....       LCALL   ??io_init?relay
+    210          
+    211                   fire1=getfire();
+   \   00011D                ; Setup parameters for call to function getfire
+   \   00011D   12....       LCALL   ??getfire?relay
+   \   000120   E9           MOV     A,R1
+   \   000121   90....       MOV     DPTR,#fire1
+   \   000124   F0           MOVX    @DPTR,A
+    212                   //setfire0();
+    213                   //fire_data[0]=fire1;
+    214                   //tmp_msg[0] = myID;
+    215                   //tmp_msg[1] = fire_data[0];
+    216                   //tmp_msg[2] = 0x66;
+    217                           
+    218                  //Send_Message();
+    219                  HalLedBlink(HAL_LED_4,2,50,300);
+   \   000125                ; Setup parameters for call to function HalLedBlink
+   \   000125   7C2C         MOV     R4,#0x2c
+   \   000127   7D01         MOV     R5,#0x1
+   \   000129   7B32         MOV     R3,#0x32
+   \   00012B   7A02         MOV     R2,#0x2
+   \   00012D   7908         MOV     R1,#0x8
+   \   00012F   12....       LCALL   ??HalLedBlink?relay
+    220                  osal_start_timerEx(My_TaskID, FIRE_MSG_EVT_ID, 200 );
+   \   000132                ; Setup parameters for call to function osal_start_timerEx
+   \   000132   7CC8         MOV     R4,#-0x38
+   \   000134   7D00         MOV     R5,#0x0
+   \   000136   7A08         MOV     R2,#0x8
+   \   000138   12....       LCALL   ??Subroutine3_0 & 0xFFFF
+    221                  
+    222                  return (events ^ FIRE_MSG_EVT_ID);
+   \                     ??CrossCallReturnLabel_5:
+   \   00013B   EE           MOV     A,R6
+   \   00013C   6408         XRL     A,#0x8
+   \   00013E   80D1         SJMP    ??My_Task_Process_Event_9
+    223              }
+    224             
+    225              
+    226          
+    227              
+    228               //关闭蜂鸣器的事件
+    229              if(events & BEEP_OFF_EVT_ID) 
+   \                     ??My_Task_Process_Event_10:
+   \   000140   EE           MOV     A,R6
+   \   000141   5402         ANL     A,#0x2
+   \   000143   6005         JZ      ??My_Task_Process_Event_11
+    230              {
+    231                  BEEP_OFF;
+   \   000145   D2A0         SETB    0xa0.0
+   \   000147   53FFFE       ANL     0xff,#0xfe
+    232              }
+    233                
+    234           
+    235              return 0;
+   \                     ??My_Task_Process_Event_11:
+   \   00014A   7A00         MOV     R2,#0x0
+   \   00014C   7B00         MOV     R3,#0x0
+   \                     ??My_Task_Process_Event_7:
+   \   00014E   7F04         MOV     R7,#0x4
+   \   000150   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   000153                REQUIRE _A_P2
+   \   000153                REQUIRE P2DIR
+    236            
+    237              
+    238          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   E0           MOVX    A,@DPTR
+   \   000001   FA           MOV     R2,A
+   \   000002   A3           INC     DPTR
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   FB           MOV     R3,A
+   \   000005   12....       LCALL   ??SHT10_Calculate?relay
+   \   000008   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   7A01         MOV     R2,#0x1
+   \   000002                REQUIRE ??Subroutine3_0
+   \   000002                ; // Fall through to label ??Subroutine3_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine3_0:
+   \   000000   7B00         MOV     R3,#0x0
+   \   000002   90....       MOV     DPTR,#My_TaskID
+   \   000005   E0           MOVX    A,@DPTR
+   \   000006   F9           MOV     R1,A
+   \   000007   12....       LCALL   ??osal_start_timerEx?relay
+   \   00000A   22           RET
+    239          
+    240          //处理接收到的数据
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    241          void My_Task_Process_MSG ( afIncomingMSGPacket_t *msg )
+   \                     My_Task_Process_MSG:
+    242          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+    243              switch ( msg->clusterId )
+   \   000005   8A82         MOV     DPL,R2
+   \   000007   8B83         MOV     DPH,R3
+   \   000009   A3           INC     DPTR
+   \   00000A   A3           INC     DPTR
+   \   00000B   A3           INC     DPTR
+   \   00000C   A3           INC     DPTR
+   \   00000D   E0           MOVX    A,@DPTR
+   \   00000E   F5..         MOV     ?V0 + 0,A
+   \   000010   A3           INC     DPTR
+   \   000011   E0           MOVX    A,@DPTR
+   \   000012   F5..         MOV     ?V0 + 1,A
+   \   000014   78..         MOV     R0,#?V0 + 0
+   \   000016   12....       LCALL   ?US_SWITCH_DENSE
+   \                     `?<Jumptable for My_Task_Process_MSG>_0`:
+   \   000019   0300         DW        3
+   \   00001B   01           DB        1
+   \   00001C   ....         DW        ??CrossCallReturnLabel_6
+   \   00001E   ....         DW        ??My_Task_Process_MSG_0
+   \   000020   ....         DW        ??My_Task_Process_MSG_0
+    244              {
+    245                   break;
+    246              case CLUSTER_1_ID :
+    247          
+    248                   
+    249              case CLUSTER_2_ID:
+    250                   if(  ('O' == msg->cmd.Data[0])&&
+    251                        ('P' == msg->cmd.Data[1])&&  
+    252                        ('E' == msg->cmd.Data[2])&&
+    253                        ('N' == msg->cmd.Data[3])    )
+   \                     ??My_Task_Process_MSG_0:
+   \   000022   EA           MOV     A,R2
+   \   000023   2421         ADD     A,#0x21
+   \   000025   F582         MOV     DPL,A
+   \   000027   EB           MOV     A,R3
+   \   000028   3400         ADDC    A,#0x0
+   \   00002A   F583         MOV     DPH,A
+   \   00002C   E0           MOVX    A,@DPTR
+   \   00002D   F8           MOV     R0,A
+   \   00002E   A3           INC     DPTR
+   \   00002F   E0           MOVX    A,@DPTR
+   \   000030   F9           MOV     R1,A
+   \   000031   8882         MOV     DPL,R0
+   \   000033   8983         MOV     DPH,R1
+   \   000035   E0           MOVX    A,@DPTR
+   \   000036   644F         XRL     A,#0x4f
+   \   000038   702B         JNZ     ??CrossCallReturnLabel_6
+   \   00003A   A3           INC     DPTR
+   \   00003B   E0           MOVX    A,@DPTR
+   \   00003C   6450         XRL     A,#0x50
+   \   00003E   7025         JNZ     ??CrossCallReturnLabel_6
+   \   000040   8882         MOV     DPL,R0
+   \   000042   8983         MOV     DPH,R1
+   \   000044   A3           INC     DPTR
+   \   000045   A3           INC     DPTR
+   \   000046   E0           MOVX    A,@DPTR
+   \   000047   6445         XRL     A,#0x45
+   \   000049   701A         JNZ     ??CrossCallReturnLabel_6
+   \   00004B   8882         MOV     DPL,R0
+   \   00004D   8983         MOV     DPH,R1
+   \   00004F   A3           INC     DPTR
+   \   000050   A3           INC     DPTR
+   \   000051   A3           INC     DPTR
+   \   000052   E0           MOVX    A,@DPTR
+   \   000053   644E         XRL     A,#0x4e
+   \   000055   700E         JNZ     ??CrossCallReturnLabel_6
+    254                   {
+    255                      BEEP_ON;
+   \   000057   43FF01       ORL     0xff,#0x1
+   \   00005A   C2A0         CLR     0xa0.0
+    256                      osal_start_timerEx(My_TaskID, BEEP_OFF_EVT_ID, 1000 );
+   \   00005C                ; Setup parameters for call to function osal_start_timerEx
+   \   00005C   7CE8         MOV     R4,#-0x18
+   \   00005E   7D03         MOV     R5,#0x3
+   \   000060   7A02         MOV     R2,#0x2
+   \   000062   12....       LCALL   ??Subroutine3_0 & 0xFFFF
+    257                   }
+    258          
+    259                   break;
+    260              default:  break;    
+    261              }
+    262          }
+   \                     ??CrossCallReturnLabel_6:
+   \   000065                REQUIRE ?Subroutine0
+   \   000065                REQUIRE P2DIR
+   \   000065                REQUIRE _A_P2
+   \   000065                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7F02         MOV     R7,#0x2
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+    263          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    264          void Send_Message(void)
+   \                     Send_Message:
+    265          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+    266              AF_DataRequest( &Single_DstAddr,                //发送地址模式
+    267                              &My_EndPoint_Desc,              //端点描述符
+    268                              CLUSTER_1_ID,                   //簇ID
+    269                              (byte)osal_strlen(tmp_msg)+1,   //发送长度
+                                                       ^
+Warning[Pe167]: argument of type "unsigned char *" is incompatible with
+          parameter of type "char *"
+    270                              (byte *)tmp_msg,                //发送内容
+    271                              & TransID,                      //帧序号
+    272                              AF_DISCV_ROUTE,                 //发现路由
+    273                              AF_DEFAULT_RADIUS);             //路由半径（默认16级）
+   \   000005                ; Setup parameters for call to function AF_DataRequest
+   \   000005   75..1E       MOV     ?V0 + 0,#0x1e
+   \   000008   78..         MOV     R0,#?V0 + 0
+   \   00000A   12....       LCALL   ?PUSH_XSTACK_I_ONE
+   \   00000D   75....       MOV     ?V0 + 0,#TransID & 0xff
+   \   000010   75....       MOV     ?V0 + 1,#(TransID >> 8) & 0xff
+   \   000013   78..         MOV     R0,#?V0 + 0
+   \   000015   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000018   75....       MOV     ?V0 + 0,#tmp_msg & 0xff
+   \   00001B   75....       MOV     ?V0 + 1,#(tmp_msg >> 8) & 0xff
+   \   00001E   78..         MOV     R0,#?V0 + 0
+   \   000020   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000023                ; Setup parameters for call to function osal_strlen
+   \   000023   7A..         MOV     R2,#tmp_msg & 0xff
+   \   000025   7B..         MOV     R3,#(tmp_msg >> 8) & 0xff
+   \   000027   12....       LCALL   ??osal_strlen?relay
+   \   00002A   EA           MOV     A,R2
+   \   00002B   2401         ADD     A,#0x1
+   \   00002D   F5..         MOV     ?V0 + 0,A
+   \   00002F   E4           CLR     A
+   \   000030   3400         ADDC    A,#0x0
+   \   000032   F5..         MOV     ?V0 + 1,A
+   \   000034   78..         MOV     R0,#?V0 + 0
+   \   000036   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000039   75..03       MOV     ?V0 + 0,#0x3
+   \   00003C   75..00       MOV     ?V0 + 1,#0x0
+   \   00003F   78..         MOV     R0,#?V0 + 0
+   \   000041   12....       LCALL   ?PUSH_XSTACK_I_TWO
+   \   000044   7920         MOV     R1,#0x20
+   \   000046   7C..         MOV     R4,#My_EndPoint_Desc & 0xff
+   \   000048   7D..         MOV     R5,#(My_EndPoint_Desc >> 8) & 0xff
+   \   00004A   7A..         MOV     R2,#Single_DstAddr & 0xff
+   \   00004C   7B..         MOV     R3,#(Single_DstAddr >> 8) & 0xff
+   \   00004E   12....       LCALL   ??AF_DataRequest?relay
+   \   000051   7409         MOV     A,#0x9
+   \   000053   12....       LCALL   ?DEALLOC_XSTACK8
+    274          }
+   \   000056   80..         SJMP    ?Subroutine0
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for NwkState>`:
+   \   000000   01           DB 1
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??My_Task_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    My_Task_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??My_Task_Process_Event?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    My_Task_Process_Event
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??My_Task_Process_MSG?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    My_Task_Process_MSG
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Send_Message?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Send_Message
+    275          
+    276          
+    277          
+    278          
+    279          
+    280          
+
+   Maximum stack usage in bytes:
+
+     Function                 ISTACK PSTACK XSTACK
+     --------                 ------ ------ ------
+     My_Task_Init                 0      0      9
+       -> afRegister              0      0     18
+     My_Task_Process_Event        0      0     12
+       -> osal_msg_receive        0      0     24
+       -> My_Task_Process_MSG     0      0     24
+       -> osal_msg_deallocate     0      0     24
+       -> osal_msg_receive        0      0     24
+       -> osal_start_timerEx      0      0     24
+       -> osal_start_timerEx      0      0     24
+       -> DS18B20_SendConvert     0      0     24
+       -> DS18B20_GetTem          0      0     24
+       -> InitialAD               0      0     24
+       -> Light_GetAdc            0      0     24
+       -> SHT10_init              0      0     24
+       -> SHT10_Measure           0      0     24
+       -> SHT10_Measure           0      0     24
+       -> SHT10_Calculate         0      0     24
+       -> SHT10_Calculate         0      0     24
+       -> Send_Message            0      0     24
+       -> HalLedBlink             0      0     24
+       -> osal_start_timerEx      0      0     24
+       -> io_init                 0      0     24
+       -> getfire                 0      0     24
+       -> HalLedBlink             0      0     24
+       -> osal_start_timerEx      0      0     24
+     My_Task_Process_MSG          0      0     22
+       -> osal_start_timerEx      0      0     20
+     Send_Message                 0      0     31
+       -> osal_strlen             0      0     30
+       -> AF_DataRequest          0      0     38
+
+
+   Segment part sizes:
+
+     Function/Label                Bytes
+     --------------                -----
+     _A_P2                            1
+     P2DIR                            1
+     My_TaskID                        1
+     TransID                          1
+     tmp_msg                          7
+     light                            1
+     temperature                      1
+     humi                             1
+     uTempValue                       2
+     uHumiValue                       2
+     fTempValue                       4
+     fHumiValue                       4
+     fire1                            1
+     multi_DstAddr                   12
+     Single_DstAddr                  12
+     NwkState                         1
+     My_EndPoint_Desc                 6
+     My_InCluster_List                4
+     My_OutCluster_List               4
+     My_EndPoint_SimpleDesc          12
+     My_Task_Init                    64
+     My_Task_Process_Event          339
+     ?Subroutine2                     9
+     ?Subroutine1                     2
+     ??Subroutine3_0                 11
+     My_Task_Process_MSG            101
+     ?Subroutine0                     5
+     Send_Message                    88
+     ?<Initializer for NwkState>      1
+     ??My_Task_Init?relay             6
+     ??My_Task_Process_Event?relay    6
+     ??My_Task_Process_MSG?relay      6
+     ??Send_Message?relay             6
+
+ 
+ 619 bytes in segment BANKED_CODE
+  24 bytes in segment BANK_RELAYS
+   2 bytes in segment SFR_AN
+   1 byte  in segment XDATA_I
+   1 byte  in segment XDATA_ID
+  20 bytes in segment XDATA_ROM_C
+  55 bytes in segment XDATA_Z
+ 
+ 644 bytes of CODE  memory
+  20 bytes of CONST memory
+   0 bytes of DATA  memory (+ 2 bytes shared)
+  56 bytes of XDATA memory
+
+Errors: none
+Warnings: 1

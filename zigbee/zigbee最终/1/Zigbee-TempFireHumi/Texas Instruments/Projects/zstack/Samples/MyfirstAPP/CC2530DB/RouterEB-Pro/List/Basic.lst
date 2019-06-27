@@ -1,0 +1,1191 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         10/Jun/2019  13:31:57 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\fangxi1998\Desktop\课程设计\zigbee        #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\So #
+#                          urce\Basic.c                                       #
+#    Command line       =  -f "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\Tools\CC2530DB\f8wRouter.cfg"      #
+#                          (-DCPU32MHZ -DROOT=__near_func                     #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE -DRTR_NWK         #
+#                          -DBLINK_LEDS) -f "C:\Users\fangxi1998\Desktop\课程 #
+#                          设计\zigbee 嵌入式linux\zigbee最终\1\Zigbee-TempFi #
+#                          reHumi\Texas Instruments\Projects\zstack\Samples\M #
+#                          yfirstAPP\CC2530DB\..\..\..\Tools\CC2530DB\f8wConf #
+#                          ig.cfg" (-DSECURE=0 -DZG_SECURE_DYNAMIC=0          #
+#                          -DREFLECTOR -DDEFAULT_CHANLIST=0x04000000          #
+#                          -DZDAPP_CONFIG_PAN_ID=0xA1B2                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\So #
+#                          urce\Basic.c" -D ZIGBEEPRO -D ZTOOL_P1 -D MT_TASK  #
+#                          -D MT_SYS_FUNC -D MT_ZDO_FUNC -D                   #
+#                          LCD_SUPPORTED=DEBUG -lC "C:\Users\fangxi1998\Deskt #
+#                          op\课程设计\zigbee 嵌入式linux\zigbee最终\1\Zigbee #
+#                          -TempFireHumi\Texas Instruments\Projects\zstack\Sa #
+#                          mples\MyfirstAPP\CC2530DB\RouterEB-Pro\List\" -lA  #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\RouterEB-Pro\List\" --diag_suppress         #
+#                          Pe001,Pa010 -o "C:\Users\fangxi1998\Desktop\课程设 #
+#                          计\zigbee 嵌入式linux\zigbee最终\1\Zigbee-TempFire #
+#                          Humi\Texas Instruments\Projects\zstack\Samples\Myf #
+#                          irstAPP\CC2530DB\RouterEB-Pro\Obj\" -e --debug     #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 8 -I "C:\Users\fangxi1998\Deskto #
+#                          p\课程设计\zigbee 嵌入式linux\zigbee最终\1\Zigbee- #
+#                          TempFireHumi\Texas Instruments\Projects\zstack\Sam #
+#                          ples\MyfirstAPP\CC2530DB\" -I                      #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\SOURCE\" -I "C:\Users\fangxi1998\Desktop #
+#                          \课程设计\zigbee 嵌入式linux\zigbee最终\1\Zigbee-T #
+#                          empFireHumi\Texas Instruments\Projects\zstack\Samp #
+#                          les\MyfirstAPP\CC2530DB\..\..\..\ZMAIN\TI2530DB\"  #
+#                          -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\MT\" -I           #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\HAL\INCLUDE\" -I  #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\HAL\TARGET\CC2530 #
+#                          EB\" -I "C:\Users\fangxi1998\Desktop\课程设计\zigb #
+#                          ee 嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Te #
+#                          xas Instruments\Projects\zstack\Samples\MyfirstAPP #
+#                          \CC2530DB\..\..\..\..\..\COMPONENTS\OSAL\MCU\CCSOC #
+#                          \" -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee #
+#                           嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texa #
+#                          s Instruments\Projects\zstack\Samples\MyfirstAPP\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\OSAL\INCLUDE\"   #
+#                          -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\AF\" -I     #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\NWK\" -I    #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\SEC\" -I    #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\" -I   #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\SYS\" -I    #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\" -I    #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\ZMAC\F8W\" -I     #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\ZMAC\" -I         #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\SERVICES\SADDR\"  #
+#                          -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\SERVICES\SDATA\"  #
+#                          -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\MAC\INCLUDE\" -I  #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\MAC\HIGH_LEVEL\"  #
+#                          -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\MAC\LOW_LEVEL\srf #
+#                          04\" -I "C:\Users\fangxi1998\Desktop\课程设计\zigb #
+#                          ee 嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Te #
+#                          xas Instruments\Projects\zstack\Samples\MyfirstAPP #
+#                          \CC2530DB\..\..\..\..\..\COMPONENTS\MAC\LOW_LEVEL\ #
+#                          srf04\SINGLE_CHIP\" -Ohz                           #
+#    List file          =  C:\Users\fangxi1998\Desktop\课程设计\zigbee        #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\RouterEB-Pro\List\Basic.lst                 #
+#    Object file        =  C:\Users\fangxi1998\Desktop\课程设计\zigbee        #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\RouterEB-Pro\Obj\Basic.r51                  #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\fangxi1998\Desktop\课程设计\zigbee 嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas Instruments\Projects\zstack\Samples\MyfirstAPP\Source\Basic.c
+      1          /***********************************************************
+      2          **  FileName:         Basic.c
+      3          **  Introductions:    Sunplusapp CC2530 ZigBee Node Basic Functions & Options
+      4          **  Last Modify time: 2013.06.13
+      5          **  Modify:           传感器实验仪中LED标号更改，添加控制LED闪烁的函数
+      6          **  Author:           GuoZhenjiang	<zhenjiang.guo@sunplusapp.com>
+      7          ***********************************************************/
+      8          
+      9          #include "Basic.h"
+
+   \                                 In  segment SFR_AN, at 0x80
+   \   union <unnamed> volatile __sfr _A_P0
+   \                     _A_P0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8c
+   \   unsigned char volatile __sfr PICTL
+   \                     PICTL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8d
+   \   unsigned char volatile __sfr P1IEN
+   \                     P1IEN:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8f
+   \   unsigned char volatile __sfr P0INP
+   \                     P0INP:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x9a
+   \   unsigned char volatile __sfr IEN2
+   \                     IEN2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x9e
+   \   unsigned char volatile __sfr CLKCONSTA
+   \                     CLKCONSTA:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xa0
+   \   union <unnamed> volatile __sfr _A_P2
+   \                     _A_P2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xab
+   \   unsigned char volatile __sfr P0IEN
+   \                     P0IEN:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xac
+   \   unsigned char volatile __sfr P2IEN
+   \                     P2IEN:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xb8
+   \   union <unnamed> volatile __sfr _A_IEN1
+   \                     _A_IEN1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc6
+   \   unsigned char volatile __sfr CLKCONCMD
+   \                     CLKCONCMD:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf3
+   \   unsigned char volatile __sfr P0SEL
+   \                     P0SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf4
+   \   unsigned char volatile __sfr P1SEL
+   \                     P1SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf5
+   \   unsigned char volatile __sfr P2SEL
+   \                     P2SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf6
+   \   unsigned char volatile __sfr P1INP
+   \                     P1INP:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf7
+   \   unsigned char volatile __sfr P2INP
+   \                     P2INP:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xff
+   \   unsigned char volatile __sfr P2DIR
+   \                     P2DIR:
+   \   000000                DS 1
+     10          
+     11          /***********************************************************
+     12          **  函数名称: SystemClockSet
+     13          **  实现功能: 系统时钟设置
+     14          **  入口参数: RTC_Clk:  RTC时钟源选择( CPU_32kHz_RC 或 CPU_32kHz_XOC)
+     15          **            CPU_Clk:  CPU时钟源选择( CPU_16MHz_RC 或 CPU_32MHz_XOC)
+     16          **            T_Spd:    定时器时钟源预分频设置，TSPD_x，表示取CPU时钟源的1/x。
+     17          **            CPU_Spd:  CPU时钟源预分频设置， CLKSPD_x，表示取CPU时钟源的1/x。
+     18          **  返回结果: None
+     19          ***********************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     20          void SystemClockSet( ClkSet_t RTC_Clk, ClkSet_t CPU_Clk, ClkSet_t T_Spd, ClkSet_t CPU_Spd )
+   \                     SystemClockSet:
+     21          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     22              uint8 SysClockSet;
+     23              SysClockSet = RTC_Clk | CPU_Clk | T_Spd | CPU_Spd;
+   \   000000   E9           MOV     A,R1
+   \   000001   4A           ORL     A,R2
+   \   000002   4B           ORL     A,R3
+   \   000003   4C           ORL     A,R4
+   \   000004   F8           MOV     R0,A
+     24              //设置系统各项时钟参数
+     25              CLKCONCMD = SysClockSet;
+   \   000005   88C6         MOV     0xc6,R0
+     26          
+     27              //等待时钟稳定
+     28              while( CLKCONSTA != SysClockSet)
+   \                     ??SystemClockSet_0:
+   \   000007   E59E         MOV     A,0x9e
+   \   000009   68           XRL     A,R0
+   \   00000A   70FB         JNZ     ??SystemClockSet_0
+     29                  ;
+     30          }
+   \   00000C   02....       LJMP    ?BRET
+   \   00000F                REQUIRE CLKCONCMD
+   \   00000F                REQUIRE CLKCONSTA
+     31          
+     32          /***********************************************************
+     33          **  函数名称: delay_us
+     34          **  实现功能: 微秒级短暂延时
+     35          **  入口参数: [t]:CPU 减一延时次数;
+     36          **  返回结果: None
+     37          ***********************************************************/
+     38          /*
+     39          void delay_us(uint16 t)
+     40          {
+     41              uint16 i;
+     42              for(i=0; i<t; i++)
+     43                  ;
+     44          }
+     45          */
+     46          /***********************************************************
+     47          **  函数名称: delay_10ms
+     48          **  实现功能: 延时函数
+     49          **  入口参数: num_10ms:要延时值的 10ms 个数;
+     50          **  返回结果: None
+     51          ***********************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     52          void delay_10ms(uint16 num_10ms)
+   \                     delay_10ms:
+     53          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     54              uint16 i, j, k;
+     55              for(i=0; i<num_10ms; i++)
+   \   000000   7800         MOV     R0,#0x0
+   \   000002   7900         MOV     R1,#0x0
+   \   000004   8008         SJMP    ??delay_10ms_0
+     56                  for(j=0; j<100; j++)
+     57                      for(k=0; k<100; k++)
+   \                     ??delay_10ms_1:
+   \   000006   E8           MOV     A,R0
+   \   000007   2401         ADD     A,#0x1
+   \   000009   08           INC     R0
+   \   00000A   E9           MOV     A,R1
+   \   00000B   3400         ADDC    A,#0x0
+   \   00000D   F9           MOV     R1,A
+   \                     ??delay_10ms_0:
+   \   00000E   C3           CLR     C
+   \   00000F   E8           MOV     A,R0
+   \   000010   9A           SUBB    A,R2
+   \   000011   E9           MOV     A,R1
+   \   000012   9B           SUBB    A,R3
+   \   000013   40F1         JC      ??delay_10ms_1
+     58                          ;
+     59          }
+   \   000015   02....       LJMP    ?BRET
+     60          
+     61          /***********************************************************
+     62          **  函数名称: LED_4_5_PortInit
+     63          **  实现功能: 扩展板上的 LED_D4_D5 端口初始化
+     64          **  入口参数: None
+     65          **  返回结果: None
+     66          ***********************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     67          void LED_4_5_PortInit(void)
+   \                     LED_4_5_PortInit:
+     68          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     69              P1SEL &= ~0X02;
+   \   000000   53F4FD       ANL     0xf4,#0xfd
+     70              P2SEL &= ~0X01;
+   \   000003   53F5FE       ANL     0xf5,#0xfe
+     71          
+     72              P1DIR |= 0X02;
+   \   000006   43FE02       ORL     0xfe,#0x2
+     73              P2DIR |= 0X01;
+   \   000009   43FF01       ORL     0xff,#0x1
+     74          
+     75              LED_4_OFF;
+   \   00000C   D2A0         SETB    0xa0.0
+     76              LED_5_OFF;
+   \   00000E   D291         SETB    0x90.1
+     77          }
+   \   000010   02....       LJMP    ?BRET
+   \   000013                REQUIRE P1SEL
+   \   000013                REQUIRE P2SEL
+   \   000013                REQUIRE P1DIR
+   \   000013                REQUIRE P2DIR
+   \   000013                REQUIRE _A_P2
+   \   000013                REQUIRE _A_P1
+     78          
+     79          /***********************************************************
+     80          **  函数名称: LED_Flash
+     81          **  实现功能: LED4 & LED5闪烁控制
+     82          **  入口参数: led:启用的LED
+     83          **            num:闪烁次数
+     84          **            onTime:每次闪烁亮起时间10ms数
+     85          **            offTime:每次闪烁熄灭时间10ms数
+     86          **  返回结果: None
+     87          ***********************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     88          void LED_Flash(LED_t led, uint16 num, uint16 onTime, uint16 offTime)
+   \                     LED_Flash:
+     89          {
+   \   000000   74F0         MOV     A,#-0x10
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 0
+   \   000005   89..         MOV     ?V0 + 2,R1
+   \   000007   8A..         MOV     ?V0 + 6,R2
+   \   000009   8B..         MOV     ?V0 + 7,R3
+   \   00000B   8C..         MOV     ?V0 + 4,R4
+   \   00000D   8D..         MOV     ?V0 + 5,R5
+   \   00000F   7410         MOV     A,#0x10
+   \   000011   12....       LCALL   ?XSTACK_DISP0_8
+   \   000014   E0           MOVX    A,@DPTR
+   \   000015   F5..         MOV     ?V0 + 0,A
+   \   000017   A3           INC     DPTR
+   \   000018   E0           MOVX    A,@DPTR
+   \   000019   F5..         MOV     ?V0 + 1,A
+     90              uint16 Num;
+     91              for(Num=0; Num < num; Num++)
+   \   00001B   7E00         MOV     R6,#0x0
+   \   00001D   7F00         MOV     R7,#0x0
+   \   00001F   8013         SJMP    ??LED_Flash_0
+     92              {
+     93                  // 点亮
+     94                  switch(led)
+     95                  {
+     96                  case LED4:  LED_4_ON;   break;
+     97                  case LED5:  LED_5_ON;   break;
+     98                  case LED45: LED_45_ON;  break;
+     99                  default :               break;
+    100                  }
+    101                  delay_10ms(onTime);
+    102                  // 熄灭
+    103                  switch(led)
+    104                  {
+    105                  case LED4:  LED_4_OFF;  break;
+    106                  case LED5:  LED_5_OFF;  break;
+    107                  case LED45: LED_45_OFF; break;
+   \                     ??LED_Flash_1:
+   \   000021   D2A0         SETB    0xa0.0
+   \                     ??LED_Flash_2:
+   \   000023   D291         SETB    0x90.1
+    108                  default :               break;
+    109                  }
+    110                  delay_10ms(offTime);
+   \                     ??LED_Flash_3:
+   \   000025                ; Setup parameters for call to function delay_10ms
+   \   000025   AA..         MOV     R2,?V0 + 0
+   \   000027   AB..         MOV     R3,?V0 + 1
+   \   000029   12....       LCALL   ??delay_10ms?relay
+   \   00002C   EE           MOV     A,R6
+   \   00002D   2401         ADD     A,#0x1
+   \   00002F   0E           INC     R6
+   \   000030   EF           MOV     A,R7
+   \   000031   3400         ADDC    A,#0x0
+   \   000033   FF           MOV     R7,A
+   \                     ??LED_Flash_0:
+   \   000034   C3           CLR     C
+   \   000035   EE           MOV     A,R6
+   \   000036   95..         SUBB    A,?V0 + 6
+   \   000038   EF           MOV     A,R7
+   \   000039   95..         SUBB    A,?V0 + 7
+   \   00003B   502B         JNC     ??LED_Flash_4
+   \   00003D   E5..         MOV     A,?V0 + 2
+   \   00003F   6008         JZ      ??LED_Flash_5
+   \   000041   14           DEC     A
+   \   000042   600B         JZ      ??LED_Flash_6
+   \   000044   14           DEC     A
+   \   000045   6006         JZ      ??LED_Flash_7
+   \   000047   8008         SJMP    ??LED_Flash_8
+   \                     ??LED_Flash_5:
+   \   000049   C2A0         CLR     0xa0.0
+   \   00004B   8004         SJMP    ??LED_Flash_8
+   \                     ??LED_Flash_7:
+   \   00004D   C2A0         CLR     0xa0.0
+   \                     ??LED_Flash_6:
+   \   00004F   C291         CLR     0x90.1
+   \                     ??LED_Flash_8:
+   \   000051                ; Setup parameters for call to function delay_10ms
+   \   000051   AA..         MOV     R2,?V0 + 4
+   \   000053   AB..         MOV     R3,?V0 + 5
+   \   000055   12....       LCALL   ??delay_10ms?relay
+   \   000058   E5..         MOV     A,?V0 + 2
+   \   00005A   6008         JZ      ??LED_Flash_9
+   \   00005C   14           DEC     A
+   \   00005D   60C4         JZ      ??LED_Flash_2
+   \   00005F   14           DEC     A
+   \   000060   60BF         JZ      ??LED_Flash_1
+   \   000062   80C1         SJMP    ??LED_Flash_3
+   \                     ??LED_Flash_9:
+   \   000064   D2A0         SETB    0xa0.0
+   \   000066   80BD         SJMP    ??LED_Flash_3
+    111              }
+    112          }
+   \                     ??LED_Flash_4:
+   \   000068   7F08         MOV     R7,#0x8
+   \   00006A   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   00006D                REQUIRE _A_P2
+   \   00006D                REQUIRE _A_P1
+    113          
+    114          /***********************************************************
+    115          **  函数名称: SetIOInput
+    116          **  实现功能: 设置端口为普通输入IO
+    117          **  入口参数: group:Port;
+    118          **            bit:Bit;
+    119          **            pull:(Pull_None:无上下拉; Pull_Up:上拉; Pull_Down:下拉;);
+    120          **  返回结果: None
+    121          ***********************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    122          void SetIOInput(uint8 group, uint8 bit, PullSet_t pull)
+   \                     SetIOInput:
+    123          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+   \   000004   75..01       MOV     ?V0 + 0,#0x1
+   \   000007   75..00       MOV     ?V0 + 1,#0x0
+   \   00000A   EA           MOV     A,R2
+   \   00000B   78..         MOV     R0,#?V0 + 0
+   \   00000D   12....       LCALL   ?S_SHL
+   \   000010   A8..         MOV     R0,?V0 + 0
+   \   000012   E8           MOV     A,R0
+   \   000013   F4           CPL     A
+   \   000014   FC           MOV     R4,A
+   \   000015   E9           MOV     A,R1
+   \   000016   6008         JZ      ??SetIOInput_0
+   \   000018   14           DEC     A
+   \   000019   601F         JZ      ??SetIOInput_1
+   \   00001B   14           DEC     A
+   \   00001C   6036         JZ      ??SetIOInput_2
+   \   00001E   804C         SJMP    ??SetIOInput_3
+    124              switch(group)
+    125              {
+    126              case 0:
+    127                  //设置为通用输入IO
+    128                  P0DIR &= BIT_0(bit); P0SEL &= BIT_0(bit);
+   \                     ??SetIOInput_0:
+   \   000020   EC           MOV     A,R4
+   \   000021   52FD         ANL     0xfd,A
+   \   000023   52F3         ANL     0xf3,A
+    129                  //设置内部上下拉电阻状态
+    130                  if(Pull_None == pull)
+   \   000025   EB           MOV     A,R3
+   \   000026   7005         JNZ     ??SetIOInput_4
+    131                      P0INP |= BIT_1(bit);     //P0INP[7-0]:(0:上下拉有效; 1:无效;)
+   \   000028   E8           MOV     A,R0
+   \   000029   428F         ORL     0x8f,A
+   \   00002B   803F         SJMP    ??SetIOInput_3
+    132                  else if(Pull_Up == pull)
+   \                     ??SetIOInput_4:
+   \   00002D   7401         MOV     A,#0x1
+   \   00002F   6B           XRL     A,R3
+   \   000030   703A         JNZ     ??SetIOInput_3
+    133                  {
+    134                      P0INP &= BIT_0(bit);     //P0INP[7-0]:(0:上下拉有效; 1:无效;)
+   \   000032   EC           MOV     A,R4
+   \   000033   528F         ANL     0x8f,A
+    135                      P2INP &= BIT_0(5);       //P2INP[5  ]:(0:Port0 上拉; 1:Port0 下拉;)
+   \   000035   53F7DF       ANL     0xf7,#0xdf
+   \   000038   8032         SJMP    ??SetIOInput_3
+    136                  }
+    137                  else if(Pull_Up == pull)
+    138                  {
+    139                      P0INP &= BIT_0(bit);     //P0INP[7-0]:(0:上下拉有效; 1:无效;)
+    140                      P2INP |= BIT_1(5);       //P2INP[5  ]:(0:Port0 上拉; 1:Port0 下拉;)
+    141                  }
+    142                  break;
+    143              case 1:
+    144                  //设置为通用输入IO
+    145                  P1DIR &= BIT_0(bit); P1SEL &= BIT_0(bit);
+   \                     ??SetIOInput_1:
+   \   00003A   EC           MOV     A,R4
+   \   00003B   52FE         ANL     0xfe,A
+   \   00003D   52F4         ANL     0xf4,A
+    146                  //设置内部上下拉电阻状态
+    147                  if(Pull_None == pull)
+   \   00003F   EB           MOV     A,R3
+   \   000040   7005         JNZ     ??SetIOInput_5
+    148                      P1INP |= BIT_1(bit);     //P1INP[7-2]:(0:上下拉有效; 1:无效;) P[1-0] 写无效，读为0.
+   \   000042   E8           MOV     A,R0
+   \   000043   42F6         ORL     0xf6,A
+   \   000045   8025         SJMP    ??SetIOInput_3
+    149                  else if(Pull_Up == pull)
+   \                     ??SetIOInput_5:
+   \   000047   7401         MOV     A,#0x1
+   \   000049   6B           XRL     A,R3
+   \   00004A   7020         JNZ     ??SetIOInput_3
+    150                  {
+    151                      P1INP &= BIT_0(bit);     //P1INP[7-2]:(0:上下拉有效; 1:无效;) P[1-0] 写无效，读为0.
+   \   00004C   EC           MOV     A,R4
+   \   00004D   52F6         ANL     0xf6,A
+    152                      P2INP &= BIT_0(6);       //P2INP[6  ]:(0:Port1 上拉; 1:Port1 下拉;)
+   \   00004F   53F7BF       ANL     0xf7,#0xbf
+   \   000052   8018         SJMP    ??SetIOInput_3
+    153                  }
+    154                  else if(Pull_Up == pull)
+    155                  {
+    156                      P0INP &= BIT_0(bit);     //P1INP[7-2]:(0:上下拉有效; 1:无效;) P[1-0] 写无效，读为0.
+    157                      P2INP |= BIT_1(6);       //P2INP[6  ]:(0:Port1 上拉; 1:Port1 下拉;)
+    158                  }
+    159                  break;
+    160              case 2:
+    161                  //设置为通用输入IO
+    162                  P2DIR &= BIT_0(bit); P2SEL &= BIT_0(bit);
+   \                     ??SetIOInput_2:
+   \   000054   EC           MOV     A,R4
+   \   000055   52FF         ANL     0xff,A
+   \   000057   52F5         ANL     0xf5,A
+    163                  //设置内部上下拉电阻状态
+    164                  if(Pull_None == pull)
+   \   000059   EB           MOV     A,R3
+   \   00005A   7005         JNZ     ??SetIOInput_6
+    165                      P2INP |= BIT_1(bit);     //P2INP[4-0]:(0:上下拉有效; 1:无效;)
+   \   00005C   E8           MOV     A,R0
+   \   00005D   42F7         ORL     0xf7,A
+   \   00005F   800B         SJMP    ??SetIOInput_3
+    166                  else if(Pull_Up == pull)
+   \                     ??SetIOInput_6:
+   \   000061   7401         MOV     A,#0x1
+   \   000063   6B           XRL     A,R3
+   \   000064   7006         JNZ     ??SetIOInput_3
+    167                  {
+    168                      P2INP &= BIT_0(bit);     //P2INP[4-0]:(0:上下拉有效; 1:无效;)
+   \   000066   EC           MOV     A,R4
+   \   000067   52F7         ANL     0xf7,A
+    169                      P2INP &= BIT_0(7);       //P2INP[7  ]:(0:Port2 上拉; 1:Port2 下拉;)
+   \   000069   53F77F       ANL     0xf7,#0x7f
+    170                  }
+    171                  else if(Pull_Up == pull)
+    172                  {
+    173                      P2INP &= BIT_0(bit);     //P2INP[4-0]:(0:上下拉有效; 1:无效;)
+    174                      P2INP |= BIT_1(7);       //P2INP[7  ]:(0:Port2 上拉; 1:Port2 下拉;)
+    175                  }
+    176                  break;
+    177              default:
+    178                  break;
+    179              }
+    180          }
+   \                     ??SetIOInput_3:
+   \   00006C   80..         SJMP    ?Subroutine0
+   \   00006E                REQUIRE P0DIR
+   \   00006E                REQUIRE P0SEL
+   \   00006E                REQUIRE P0INP
+   \   00006E                REQUIRE P2INP
+   \   00006E                REQUIRE P1DIR
+   \   00006E                REQUIRE P1SEL
+   \   00006E                REQUIRE P1INP
+   \   00006E                REQUIRE P2DIR
+   \   00006E                REQUIRE P2SEL
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   D0..         POP     ?V0 + 1
+   \   000002   D0..         POP     ?V0 + 0
+   \   000004   02....       LJMP    ?BRET
+    181          
+    182          /***********************************************************
+    183          **  函数名称: SetIOOutput
+    184          **  实现功能: 设置端口为普通输出IO
+    185          **  入口参数: group:Port;
+    186          **            bit:Bit;
+    187          **  返回结果: None
+    188          ***********************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    189          void SetIOOutput(uint8 group, uint8 bit)
+   \                     SetIOOutput:
+    190          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+   \   000004   75..01       MOV     ?V0 + 0,#0x1
+   \   000007   75..00       MOV     ?V0 + 1,#0x0
+   \   00000A   EA           MOV     A,R2
+   \   00000B   78..         MOV     R0,#?V0 + 0
+   \   00000D   12....       LCALL   ?S_SHL
+   \   000010   A8..         MOV     R0,?V0 + 0
+   \   000012   E8           MOV     A,R0
+   \   000013   F4           CPL     A
+   \   000014   FB           MOV     R3,A
+   \   000015   E9           MOV     A,R1
+   \   000016   6008         JZ      ??SetIOOutput_0
+   \   000018   14           DEC     A
+   \   000019   600D         JZ      ??SetIOOutput_1
+   \   00001B   14           DEC     A
+   \   00001C   6012         JZ      ??SetIOOutput_2
+   \   00001E   8016         SJMP    ??SetIOOutput_3
+    191              switch(group)
+    192              {
+    193                  case 0: P0DIR |= BIT_1(bit); P0SEL &= BIT_0(bit); break;
+   \                     ??SetIOOutput_0:
+   \   000020   E8           MOV     A,R0
+   \   000021   42FD         ORL     0xfd,A
+   \   000023   EB           MOV     A,R3
+   \   000024   52F3         ANL     0xf3,A
+   \   000026   800E         SJMP    ??SetIOOutput_3
+    194                  case 1: P1DIR |= BIT_1(bit); P1SEL &= BIT_0(bit); break;
+   \                     ??SetIOOutput_1:
+   \   000028   E8           MOV     A,R0
+   \   000029   42FE         ORL     0xfe,A
+   \   00002B   EB           MOV     A,R3
+   \   00002C   52F4         ANL     0xf4,A
+   \   00002E   8006         SJMP    ??SetIOOutput_3
+    195                  case 2: P2DIR |= BIT_1(bit); P2SEL &= BIT_0(bit); break;
+   \                     ??SetIOOutput_2:
+   \   000030   E8           MOV     A,R0
+   \   000031   42FF         ORL     0xff,A
+   \   000033   EB           MOV     A,R3
+   \   000034   52F5         ANL     0xf5,A
+    196                  default:    break;
+    197              }
+    198          }
+   \                     ??SetIOOutput_3:
+   \   000036   80..         SJMP    ?Subroutine0
+   \   000038                REQUIRE P0DIR
+   \   000038                REQUIRE P0SEL
+   \   000038                REQUIRE P1DIR
+   \   000038                REQUIRE P1SEL
+   \   000038                REQUIRE P2DIR
+   \   000038                REQUIRE P2SEL
+    199          
+    200          /***********************************************************
+    201          **  函数名称: GetIOLevel
+    202          **  实现功能: 获取端口的输入状态
+    203          **  入口参数: group:Port;
+    204          **            bit:Bit;
+    205          **  返回结果: (0:Low; 1:High;)
+    206          ***********************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    207          uint8 GetIOLevel(uint8 group, uint8 bit)
+   \                     GetIOLevel:
+    208          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+   \   000004   E9           MOV     A,R1
+   \   000005   FB           MOV     R3,A
+   \   000006   75..01       MOV     ?V0 + 0,#0x1
+   \   000009   75..00       MOV     ?V0 + 1,#0x0
+   \   00000C   EA           MOV     A,R2
+   \   00000D   78..         MOV     R0,#?V0 + 0
+   \   00000F   12....       LCALL   ?S_SHL
+   \   000012   A8..         MOV     R0,?V0 + 0
+   \   000014   EB           MOV     A,R3
+   \   000015   6008         JZ      ??GetIOLevel_0
+   \   000017   14           DEC     A
+   \   000018   600E         JZ      ??GetIOLevel_1
+   \   00001A   14           DEC     A
+   \   00001B   6012         JZ      ??GetIOLevel_2
+   \   00001D   8015         SJMP    ??GetIOLevel_3
+    209              switch(group)
+    210              {
+    211                  case 0: return !!(P0 & (BIT_1(bit)));
+   \                     ??GetIOLevel_0:
+   \   00001F   E580         MOV     A,0x80
+   \   000021   58           ANL     A,R0
+   \   000022   6010         JZ      ??GetIOLevel_3
+   \                     ??GetIOLevel_4:
+   \   000024   7901         MOV     R1,#0x1
+   \   000026   800E         SJMP    ??GetIOLevel_5
+    212                  case 1: return !!(P1 & (BIT_1(bit)));
+   \                     ??GetIOLevel_1:
+   \   000028   E590         MOV     A,0x90
+   \   00002A   58           ANL     A,R0
+   \   00002B   6007         JZ      ??GetIOLevel_3
+   \   00002D   80F5         SJMP    ??GetIOLevel_4
+    213                  case 2: return !!(P2 & (BIT_1(bit)));
+   \                     ??GetIOLevel_2:
+   \   00002F   E5A0         MOV     A,0xa0
+   \   000031   58           ANL     A,R0
+   \   000032   70F0         JNZ     ??GetIOLevel_4
+    214                  default:    break;
+    215              }
+    216              return 0;
+   \                     ??GetIOLevel_3:
+   \   000034   7900         MOV     R1,#0x0
+   \                     ??GetIOLevel_5:
+   \   000036                REQUIRE ?Subroutine0
+   \   000036                REQUIRE _A_P0
+   \   000036                REQUIRE _A_P1
+   \   000036                REQUIRE _A_P2
+   \   000036                ; // Fall through to label ?Subroutine0
+    217          }
+    218          
+    219          /***********************************************************
+    220          **  函数名称: SetIOLevel
+    221          **  实现功能: 设置端口的输出电平
+    222          **  入口参数: group:Port;
+    223          **            bit:Bit;
+    224          **            value:(0:Low; 1:High);
+    225          **  返回结果: None
+    226          ***********************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    227          void SetIOLevel(uint8 group, uint8 bit, uint8 value)
+   \                     SetIOLevel:
+    228          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+   \   000004   75..01       MOV     ?V0 + 0,#0x1
+   \   000007   75..00       MOV     ?V0 + 1,#0x0
+   \   00000A   EA           MOV     A,R2
+   \   00000B   78..         MOV     R0,#?V0 + 0
+   \   00000D   12....       LCALL   ?S_SHL
+   \   000010   A8..         MOV     R0,?V0 + 0
+   \   000012   E8           MOV     A,R0
+   \   000013   F4           CPL     A
+   \   000014   FC           MOV     R4,A
+   \   000015   E9           MOV     A,R1
+   \   000016   6008         JZ      ??SetIOLevel_0
+   \   000018   14           DEC     A
+   \   000019   6012         JZ      ??SetIOLevel_1
+   \   00001B   14           DEC     A
+   \   00001C   601C         JZ      ??SetIOLevel_2
+   \   00001E   8025         SJMP    ??SetIOLevel_3
+    229              switch(group)
+    230              {
+    231                case 0:
+    232                    if(value)
+   \                     ??SetIOLevel_0:
+   \   000020   EB           MOV     A,R3
+   \   000021   6005         JZ      ??SetIOLevel_4
+    233                      P0 |= BIT_1(bit);
+   \   000023   E8           MOV     A,R0
+   \   000024   4280         ORL     0x80,A
+   \   000026   801D         SJMP    ??SetIOLevel_3
+    234                    else
+    235                      P0 &= BIT_0(bit);
+   \                     ??SetIOLevel_4:
+   \   000028   EC           MOV     A,R4
+   \   000029   5280         ANL     0x80,A
+   \   00002B   8018         SJMP    ??SetIOLevel_3
+    236                    break;
+    237                case 1:
+    238                    if(value)
+   \                     ??SetIOLevel_1:
+   \   00002D   EB           MOV     A,R3
+   \   00002E   6005         JZ      ??SetIOLevel_5
+    239                      P1 |= BIT_1(bit);
+   \   000030   E8           MOV     A,R0
+   \   000031   4290         ORL     0x90,A
+   \   000033   8010         SJMP    ??SetIOLevel_3
+    240                    else
+    241                      P1 &= BIT_0(bit);
+   \                     ??SetIOLevel_5:
+   \   000035   EC           MOV     A,R4
+   \   000036   5290         ANL     0x90,A
+   \   000038   800B         SJMP    ??SetIOLevel_3
+    242                    break;
+    243                case 2:
+    244                    if(value)
+   \                     ??SetIOLevel_2:
+   \   00003A   EB           MOV     A,R3
+   \   00003B   6005         JZ      ??SetIOLevel_6
+    245                      P2 |= BIT_1(bit);
+   \   00003D   E8           MOV     A,R0
+   \   00003E   42A0         ORL     0xa0,A
+   \   000040   8003         SJMP    ??SetIOLevel_3
+    246                    else
+    247                      P2 &= BIT_0(bit);
+   \                     ??SetIOLevel_6:
+   \   000042   EC           MOV     A,R4
+   \   000043   52A0         ANL     0xa0,A
+    248                    break;
+    249                default:
+    250                    break;
+    251              }
+    252          }
+   \                     ??SetIOLevel_3:
+   \   000045   80..         SJMP    ?Subroutine0
+   \   000047                REQUIRE _A_P0
+   \   000047                REQUIRE _A_P1
+   \   000047                REQUIRE _A_P2
+    253          
+    254          /***********************************************************
+    255          **  函数名称: IOIntteruptSet
+    256          **  实现功能: 设置端口中断触发方式
+    257          **  入口参数: group:Port;
+    258          **            bit:Bit;
+    259          **            trigger:(Rising:上升沿触发; Falling:下降沿触发;)
+    260          **  返回结果: None
+    261          ***********************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    262          void IOIntteruptSet(uint8 group, uint8 bit, IntSel_t trigger)
+   \                     IOIntteruptSet:
+    263          {
+   \   000000   C0..         PUSH    ?V0 + 0
+   \   000002   C0..         PUSH    ?V0 + 1
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+   \   000004   75..01       MOV     ?V0 + 0,#0x1
+   \   000007   75..00       MOV     ?V0 + 1,#0x0
+   \   00000A   EA           MOV     A,R2
+   \   00000B   78..         MOV     R0,#?V0 + 0
+   \   00000D   12....       LCALL   ?S_SHL
+   \   000010   A8..         MOV     R0,?V0 + 0
+   \   000012   E8           MOV     A,R0
+   \   000013   F4           CPL     A
+   \   000014   FC           MOV     R4,A
+   \   000015   E9           MOV     A,R1
+   \   000016   6008         JZ      ??IOIntteruptSet_0
+   \   000018   14           DEC     A
+   \   000019   6027         JZ      ??IOIntteruptSet_1
+   \   00001B   14           DEC     A
+   \   00001C   605D         JZ      ??IOIntteruptSet_2
+   \   00001E   807C         SJMP    ??IOIntteruptSet_3
+    264              switch(group)
+    265              {
+    266              case 0:
+    267                  IEN1 |= BIT_1(5); //P0总中断允许
+   \                     ??IOIntteruptSet_0:
+   \   000020   D2BD         SETB    0xb8.5
+    268                  switch(trigger)
+   \   000022   EB           MOV     A,R3
+   \   000023   6008         JZ      ??IOIntteruptSet_4
+   \   000025   14           DEC     A
+   \   000026   600A         JZ      ??IOIntteruptSet_5
+   \   000028   14           DEC     A
+   \   000029   600F         JZ      ??IOIntteruptSet_6
+   \   00002B   806F         SJMP    ??IOIntteruptSet_3
+    269                  {
+    270                      case None:    P0IEN &= BIT_0( bit ); break;   //单独位中断屏蔽
+   \                     ??IOIntteruptSet_4:
+   \   00002D   EC           MOV     A,R4
+   \   00002E   52AB         ANL     0xab,A
+   \   000030   806A         SJMP    ??IOIntteruptSet_3
+    271                      case Rising:  P0IEN |= BIT_1( bit );  PICTL &= BIT_0(0); break;
+   \                     ??IOIntteruptSet_5:
+   \   000032   E8           MOV     A,R0
+   \   000033   42AB         ORL     0xab,A
+   \   000035   538CFE       ANL     0x8c,#0xfe
+   \   000038   8062         SJMP    ??IOIntteruptSet_3
+    272                      case Falling: P0IEN |= BIT_1( bit );  PICTL |= BIT_1(0); break;
+   \                     ??IOIntteruptSet_6:
+   \   00003A   E8           MOV     A,R0
+   \   00003B   42AB         ORL     0xab,A
+   \   00003D   438C01       ORL     0x8c,#0x1
+   \   000040   805A         SJMP    ??IOIntteruptSet_3
+    273                      default : break;
+    274                  }
+    275                  break;
+    276              case 1:
+    277                  IEN2 |= BIT_1(4); //P1总中断允许
+   \                     ??IOIntteruptSet_1:
+   \   000042   439A10       ORL     0x9a,#0x10
+    278                  switch(trigger)
+   \   000045   EB           MOV     A,R3
+   \   000046   6008         JZ      ??IOIntteruptSet_7
+   \   000048   14           DEC     A
+   \   000049   600A         JZ      ??IOIntteruptSet_8
+   \   00004B   14           DEC     A
+   \   00004C   601A         JZ      ??IOIntteruptSet_9
+   \   00004E   804C         SJMP    ??IOIntteruptSet_3
+    279                  {
+    280                      case None:    P1IEN &= BIT_0( bit ); break;   //单独位中断屏蔽
+   \                     ??IOIntteruptSet_7:
+   \   000050   EC           MOV     A,R4
+   \   000051   528D         ANL     0x8d,A
+   \   000053   8047         SJMP    ??IOIntteruptSet_3
+    281                      case Rising:
+    282                      {
+    283                          if( bit <= 3 )
+   \                     ??IOIntteruptSet_8:
+   \   000055   EA           MOV     A,R2
+   \   000056   C3           CLR     C
+   \   000057   9404         SUBB    A,#0x4
+   \   000059   E8           MOV     A,R0
+   \   00005A   428D         ORL     0x8d,A
+   \   00005C   5005         JNC     ??IOIntteruptSet_10
+    284                          {
+    285                              P1IEN |= BIT_1( bit );  PICTL &= BIT_0(1); break;
+   \   00005E   538CFD       ANL     0x8c,#0xfd
+   \   000061   8039         SJMP    ??IOIntteruptSet_3
+    286                          }
+    287                          else if( bit >= 4 )
+    288                          {
+    289                              P1IEN |= BIT_1( bit );  PICTL &= BIT_0(2); break;
+   \                     ??IOIntteruptSet_10:
+   \   000063   538CFB       ANL     0x8c,#0xfb
+   \   000066   8034         SJMP    ??IOIntteruptSet_3
+    290                          }
+    291                      }
+    292                      case Falling:
+    293                      {
+    294                          if( bit <= 3 )
+   \                     ??IOIntteruptSet_9:
+   \   000068   EA           MOV     A,R2
+   \   000069   C3           CLR     C
+   \   00006A   9404         SUBB    A,#0x4
+   \   00006C   E8           MOV     A,R0
+   \   00006D   428D         ORL     0x8d,A
+   \   00006F   5005         JNC     ??IOIntteruptSet_11
+    295                          {
+    296                              P1IEN |= BIT_1( bit );  PICTL |= BIT_1(1); break;
+   \   000071   438C02       ORL     0x8c,#0x2
+   \   000074   8026         SJMP    ??IOIntteruptSet_3
+    297                          }
+    298                          else if( bit >= 4 )
+    299                          {
+    300                              P1IEN |= BIT_1( bit );  PICTL |= BIT_1(2); break;
+   \                     ??IOIntteruptSet_11:
+   \   000076   438C04       ORL     0x8c,#0x4
+   \   000079   8021         SJMP    ??IOIntteruptSet_3
+    301                          }
+    302                      }
+    303                      default : break;
+    304                  }
+    305                  break;
+    306              case 2:
+    307                  IEN2 |= BIT_1(1); //P2总中断允许
+   \                     ??IOIntteruptSet_2:
+   \   00007B   439A02       ORL     0x9a,#0x2
+    308                  switch(trigger)
+   \   00007E   EB           MOV     A,R3
+   \   00007F   6008         JZ      ??IOIntteruptSet_12
+   \   000081   14           DEC     A
+   \   000082   600A         JZ      ??IOIntteruptSet_13
+   \   000084   14           DEC     A
+   \   000085   600F         JZ      ??IOIntteruptSet_14
+   \   000087   8013         SJMP    ??IOIntteruptSet_3
+    309                  {
+    310                      case None:    P2IEN &= BIT_0( bit ); break;   //单独位中断屏蔽
+   \                     ??IOIntteruptSet_12:
+   \   000089   EC           MOV     A,R4
+   \   00008A   52AC         ANL     0xac,A
+   \   00008C   800E         SJMP    ??IOIntteruptSet_3
+    311                      case Rising:  P2IEN |= BIT_1( bit );  PICTL &= BIT_0(3); break;
+   \                     ??IOIntteruptSet_13:
+   \   00008E   E8           MOV     A,R0
+   \   00008F   42AC         ORL     0xac,A
+   \   000091   538CF7       ANL     0x8c,#0xf7
+   \   000094   8006         SJMP    ??IOIntteruptSet_3
+    312                      case Falling: P2IEN |= BIT_1( bit );  PICTL |= BIT_1(3); break;
+   \                     ??IOIntteruptSet_14:
+   \   000096   E8           MOV     A,R0
+   \   000097   42AC         ORL     0xac,A
+   \   000099   438C08       ORL     0x8c,#0x8
+    313                      default : break;
+    314                  }
+    315                  break;
+    316              }
+    317          }
+   \                     ??IOIntteruptSet_3:
+   \   00009C   02....       LJMP    ?Subroutine0 & 0xFFFF
+   \   00009F                REQUIRE _A_IEN1
+   \   00009F                REQUIRE P0IEN
+   \   00009F                REQUIRE PICTL
+   \   00009F                REQUIRE IEN2
+   \   00009F                REQUIRE P1IEN
+   \   00009F                REQUIRE P2IEN
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SystemClockSet?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SystemClockSet
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??delay_10ms?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    delay_10ms
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??LED_4_5_PortInit?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    LED_4_5_PortInit
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??LED_Flash?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    LED_Flash
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SetIOInput?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SetIOInput
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SetIOOutput?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SetIOOutput
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??GetIOLevel?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    GetIOLevel
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??SetIOLevel?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    SetIOLevel
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??IOIntteruptSet?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    IOIntteruptSet
+
+   Maximum stack usage in bytes:
+
+     Function         ISTACK PSTACK XSTACK
+     --------         ------ ------ ------
+     GetIOLevel           2      0      0
+     IOIntteruptSet       2      0      0
+     LED_4_5_PortInit     0      0      0
+     LED_Flash            0      0     18
+       -> delay_10ms      0      0     32
+       -> delay_10ms      0      0     32
+     SetIOInput           2      0      0
+     SetIOLevel           2      0      0
+     SetIOOutput          2      0      0
+     SystemClockSet       0      0      0
+     delay_10ms           0      0     16
+
+
+   Segment part sizes:
+
+     Function/Label           Bytes
+     --------------           -----
+     _A_P0                       1
+     PICTL                       1
+     P1IEN                       1
+     P0INP                       1
+     _A_P1                       1
+     IEN2                        1
+     CLKCONSTA                   1
+     _A_P2                       1
+     P0IEN                       1
+     P2IEN                       1
+     _A_IEN1                     1
+     CLKCONCMD                   1
+     P0SEL                       1
+     P1SEL                       1
+     P2SEL                       1
+     P1INP                       1
+     P2INP                       1
+     P0DIR                       1
+     P1DIR                       1
+     P2DIR                       1
+     SystemClockSet             15
+     delay_10ms                 24
+     LED_4_5_PortInit           19
+     LED_Flash                 109
+     SetIOInput                110
+     ?Subroutine0                7
+     SetIOOutput                56
+     GetIOLevel                 54
+     SetIOLevel                 71
+     IOIntteruptSet            159
+     ??SystemClockSet?relay      6
+     ??delay_10ms?relay          6
+     ??LED_4_5_PortInit?relay    6
+     ??LED_Flash?relay           6
+     ??SetIOInput?relay          6
+     ??SetIOOutput?relay         6
+     ??GetIOLevel?relay          6
+     ??SetIOLevel?relay          6
+     ??IOIntteruptSet?relay      6
+
+ 
+ 624 bytes in segment BANKED_CODE
+  54 bytes in segment BANK_RELAYS
+  20 bytes in segment SFR_AN
+ 
+ 678 bytes of CODE memory
+   0 bytes of DATA memory (+ 20 bytes shared)
+
+Errors: none
+Warnings: none

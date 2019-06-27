@@ -1,0 +1,750 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         19/Jun/2019  14:08:36 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\fangxi1998\Desktop\课程设计\zigbee        #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\So #
+#                          urce\DS18B20.C                                     #
+#    Command line       =  -f "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg"       #
+#                          (-DCPU32MHZ -DROOT=__near_func                     #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                   #
+#                          -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f       #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"      #
+#                          (-DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR      #
+#                          -DDEFAULT_CHANLIST=0x04000000                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xA1B2                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\So #
+#                          urce\DS18B20.C" -D ZIGBEEPRO -D ZTOOL_P1 -D        #
+#                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
+#                          LCD_SUPPORTED=DEBUG -D DH_AD_KEY_DEVICE -lC        #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\CoordinatorEB-Pro\List\" -lA                #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\CoordinatorEB-Pro\List\" --diag_suppress    #
+#                          Pe001,Pa010 -o "C:\Users\fangxi1998\Desktop\课程设 #
+#                          计\zigbee 嵌入式linux\zigbee最终\1\Zigbee-TempFire #
+#                          Humi\Texas Instruments\Projects\zstack\Samples\Myf #
+#                          irstAPP\CC2530DB\CoordinatorEB-Pro\Obj\" -e        #
+#                          --debug --core=plain --dptr=16,1                   #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 8 -I  #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\" -I "C:\Users\fangxi1998\Desktop\课程设计\ #
+#                          zigbee 嵌入式linux\zigbee最终\1\Zigbee-TempFireHum #
+#                          i\Texas Instruments\Projects\zstack\Samples\Myfirs #
+#                          tAPP\CC2530DB\..\SOURCE\" -I                       #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\ZMAIN\TI2530DB\" -I                #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\MT\" -I           #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\HAL\INCLUDE\" -I  #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\HAL\TARGET\CC2530 #
+#                          EB\" -I "C:\Users\fangxi1998\Desktop\课程设计\zigb #
+#                          ee 嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Te #
+#                          xas Instruments\Projects\zstack\Samples\MyfirstAPP #
+#                          \CC2530DB\..\..\..\..\..\COMPONENTS\OSAL\MCU\CCSOC #
+#                          \" -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee #
+#                           嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texa #
+#                          s Instruments\Projects\zstack\Samples\MyfirstAPP\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\OSAL\INCLUDE\"   #
+#                          -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\AF\" -I     #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\NWK\" -I    #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\SEC\" -I    #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\" -I   #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\SYS\" -I    #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\" -I    #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\ZMAC\F8W\" -I     #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\ZMAC\" -I         #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\SERVICES\SADDR\"  #
+#                          -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\SERVICES\SDATA\"  #
+#                          -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\MAC\INCLUDE\" -I  #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\MAC\HIGH_LEVEL\"  #
+#                          -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\MAC\LOW_LEVEL\srf #
+#                          04\" -I "C:\Users\fangxi1998\Desktop\课程设计\zigb #
+#                          ee 嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Te #
+#                          xas Instruments\Projects\zstack\Samples\MyfirstAPP #
+#                          \CC2530DB\..\..\..\..\..\COMPONENTS\MAC\LOW_LEVEL\ #
+#                          srf04\SINGLE_CHIP\" -Ohz --require_prototypes      #
+#    List file          =  C:\Users\fangxi1998\Desktop\课程设计\zigbee        #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\CoordinatorEB-Pro\List\DS18B20.lst          #
+#    Object file        =  C:\Users\fangxi1998\Desktop\课程设计\zigbee        #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\CoordinatorEB-Pro\Obj\DS18B20.r51           #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\fangxi1998\Desktop\课程设计\zigbee 嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas Instruments\Projects\zstack\Samples\MyfirstAPP\Source\DS18B20.C
+      1          /**************************************************
+      2          
+      3          
+      4          **************************************************/
+      5          #include "DS18B20.h"
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+      6          unsigned char sensor_data_value[2];       //传感器数据
+   \                     sensor_data_value:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+      7          
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+      8          unsigned char FRACTION_INDEX[16] = {0, 1, 1, 2, 2, 3, 4, 4, 5, 6, 6, 7, 7, 8, 9, 9 };//小数值查询表
+   \                     FRACTION_INDEX:
+   \   000000                DS 16
+   \   000010                REQUIRE `?<Initializer for FRACTION_INDEX>`
+   \   000010                REQUIRE __INIT_XDATA_I
+      9          
+     10          
+     11          
+     12          /*
+     13           *    延时函数    cc2530 32M晶振 1微妙
+     14           *    输入参数：  延时时间（timeout 微秒）
+     15           *    输出参数：  无
+     16           *    返回参数：  无
+     17           *
+     18           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     19          void delay_nus(unsigned int timeout)
+   \                     delay_nus:
+     20          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+   \   000000   8003         SJMP    ??delay_nus_0
+     21              while (timeout--)
+     22              {
+     23                  asm("NOP");
+   \                     ??delay_nus_1:
+   \   000002   00           NOP
+     24                  asm("NOP");
+   \   000003   00           NOP
+     25                  asm("NOP");
+   \   000004   00           NOP
+     26          
+     27                
+     28              }
+   \                     ??delay_nus_0:
+   \   000005   EA           MOV     A,R2
+   \   000006   F8           MOV     R0,A
+   \   000007   EB           MOV     A,R3
+   \   000008   F9           MOV     R1,A
+   \   000009   E8           MOV     A,R0
+   \   00000A   24FF         ADD     A,#-0x1
+   \   00000C   1A           DEC     R2
+   \   00000D   E9           MOV     A,R1
+   \   00000E   34FF         ADDC    A,#-0x1
+   \   000010   FB           MOV     R3,A
+   \   000011   E8           MOV     A,R0
+   \   000012   49           ORL     A,R1
+   \   000013   70ED         JNZ     ??delay_nus_1
+     29          }
+   \   000015   02....       LJMP    ?BRET
+     30          
+     31          /*
+     32           *    写命令函数
+     33           *    输入参数：  命令（DS18B20.H中定义）
+     34           *    输出参数：  无
+     35           *    返回参数：  无
+     36           *
+     37           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     38          void DS18B20_Write(unsigned char cmd)
+   \                     DS18B20_Write:
+     39          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+   \   000005   E9           MOV     A,R1
+   \   000006   FF           MOV     R7,A
+     40              unsigned char i;
+     41              SET_OUT();                  //设置IO为输出，2530->DS18B20
+   \   000007   43FE80       ORL     0xfe,#0x80
+     42              
+     43              /*每次一位，循环8次*/
+     44              for(i=0; i<8; i++)
+   \   00000A   7E00         MOV     R6,#0x0
+     45              {
+     46                  CL_DQ();              //IO为低    
+   \                     ??DS18B20_Write_0:
+   \   00000C   C297         CLR     0x90.7
+     47                  if( cmd & (1<<i) )    //写数据从低位开始
+   \   00000E   75..01       MOV     ?V0 + 0,#0x1
+   \   000011   75..00       MOV     ?V0 + 1,#0x0
+   \   000014   EE           MOV     A,R6
+   \   000015   78..         MOV     R0,#?V0 + 0
+   \   000017   12....       LCALL   ?S_SHL
+   \   00001A   E5..         MOV     A,?V0 + 0
+   \   00001C   5F           ANL     A,R7
+   \   00001D   6004         JZ      ??DS18B20_Write_1
+     48                  {
+     49                    SET_DQ();           //IO输入高电平
+   \   00001F   D297         SETB    0x90.7
+   \   000021   8002         SJMP    ??DS18B20_Write_2
+     50                  }
+     51                  else
+     52                  {
+     53                    CL_DQ();            //IO输出低电平
+   \                     ??DS18B20_Write_1:
+   \   000023   C297         CLR     0x90.7
+     54                  }
+     55                  delay_nus(40);        //保持15~60us
+   \                     ??DS18B20_Write_2:
+   \   000025                ; Setup parameters for call to function delay_nus
+   \   000025   7A28         MOV     R2,#0x28
+   \   000027   7B00         MOV     R3,#0x0
+   \   000029   12....       LCALL   ??delay_nus?relay
+     56                  SET_DQ();             //IO口拉高
+   \   00002C   D297         SETB    0x90.7
+     57              }
+   \   00002E   0E           INC     R6
+   \   00002F   EE           MOV     A,R6
+   \   000030   C3           CLR     C
+   \   000031   9408         SUBB    A,#0x8
+   \   000033   40D7         JC      ??DS18B20_Write_0
+     58              SET_DQ();                 //IO口拉高
+   \   000035   D297         SETB    0x90.7
+     59          }
+   \   000037                REQUIRE ?Subroutine0
+   \   000037                REQUIRE P1DIR
+   \   000037                REQUIRE _A_P1
+   \   000037                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7F02         MOV     R7,#0x2
+   \   000002   02....       LJMP    ?BANKED_LEAVE_XDATA
+     60          
+     61          
+     62          /*
+     63           *    读数据函数
+     64           *    输入参数：  无
+     65           *    输出参数：  无
+     66           *    返回参数：  读取的数据
+     67           *
+     68           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     69          unsigned char DS18B20_Read(void)
+   \                     DS18B20_Read:
+     70          {
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+     71              unsigned char rdData;     //读出的数据
+     72              unsigned char i, dat;     //临时变量
+     73              
+     74              rdData = 0;               //读出的数据初始化为0     
+   \   000005   75..00       MOV     ?V0 + 0,#0x0
+     75              
+     76              /* 每次读一位，读8次 */
+     77              for(i=0; i<8; i++)
+   \   000008   7E00         MOV     R6,#0x0
+     78              {
+     79                  SET_OUT();
+   \                     ??DS18B20_Read_0:
+   \   00000A   43FE80       ORL     0xfe,#0x80
+     80                  CL_DQ();            //IO拉低
+   \   00000D   C297         CLR     0x90.7
+     81                  SET_DQ();           //IO拉高
+   \   00000F   D297         SETB    0x90.7
+     82                  SET_IN();           //设置IO方向为输入 DS18B20->CC2530
+   \   000011   53FE7F       ANL     0xfe,#0x7f
+   \   000014   75..01       MOV     ?V0 + 2,#0x1
+   \   000017   75..00       MOV     ?V0 + 3,#0x0
+   \   00001A   EE           MOV     A,R6
+   \   00001B   78..         MOV     R0,#?V0 + 2
+   \   00001D   12....       LCALL   ?S_SHL
+   \   000020   E5..         MOV     A,?V0 + 2
+   \   000022   A297         MOV     C,0x90.7
+   \   000024   5004         JNC     ??DS18B20_Read_1
+     83                  dat = DQ;           //读数据,从低位开始
+     84                  
+     85                  if(dat)
+     86                  {
+     87                    rdData |= (1<<i); //如果读出的数据位为正
+   \   000026   42..         ORL     ?V0 + 0,A
+   \   000028   8003         SJMP    ??DS18B20_Read_2
+     88                  }
+     89                  else
+     90                  {
+     91                    rdData &= ~(1<<i);//如果读出的数据位为负
+   \                     ??DS18B20_Read_1:
+   \   00002A   F4           CPL     A
+   \   00002B   52..         ANL     ?V0 + 0,A
+     92                  }
+     93                  
+     94                  delay_nus(70);      //保持60~120us
+   \                     ??DS18B20_Read_2:
+   \   00002D                ; Setup parameters for call to function delay_nus
+   \   00002D   7A46         MOV     R2,#0x46
+   \   00002F   7B00         MOV     R3,#0x0
+   \   000031   12....       LCALL   ??delay_nus?relay
+     95                  SET_OUT();          //设置IO方向为输出 CC2530->DS18B20
+   \   000034   43FE80       ORL     0xfe,#0x80
+     96          
+     97              }
+   \   000037   0E           INC     R6
+   \   000038   EE           MOV     A,R6
+   \   000039   C3           CLR     C
+   \   00003A   9408         SUBB    A,#0x8
+   \   00003C   40CC         JC      ??DS18B20_Read_0
+     98              return (rdData);        //返回读出的数据
+   \   00003E   A9..         MOV     R1,?V0 + 0
+   \   000040   7F04         MOV     R7,#0x4
+   \   000042   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   000045                REQUIRE P1DIR
+   \   000045                REQUIRE _A_P1
+     99          }
+    100          
+    101          
+    102          /*
+    103           *    DS18B20初始化/复位函数
+    104           *    输入参数：  无
+    105           *    输出参数：  无
+    106           *    返回参数：  无
+    107           *
+    108           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    109          void DS18B20_Init(void)
+   \                     DS18B20_Init:
+    110          {
+   \   000000   74F7         MOV     A,#-0x9
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+    111              unsigned char i;
+    112              SET_OUT();
+   \   000005   43FE80       ORL     0xfe,#0x80
+    113              SET_DQ();         //IO口拉高
+   \   000008   D297         SETB    0x90.7
+    114              CL_DQ();          //IO口拉低
+   \   00000A   C297         CLR     0x90.7
+    115              delay_nus(550);   //IO拉低后保持一段时间 480-960us
+   \   00000C                ; Setup parameters for call to function delay_nus
+   \   00000C   7A26         MOV     R2,#0x26
+   \   00000E   7B02         MOV     R3,#0x2
+   \   000010   12....       LCALL   ??delay_nus?relay
+    116              SET_DQ();         //释放
+   \   000013   D297         SETB    0x90.7
+    117              SET_IN();         //IO方向为输入 DS18B20->CC2530
+   \   000015   53FE7F       ANL     0xfe,#0x7f
+    118              delay_nus(40);    //释放总线后等待15-60us
+   \   000018                ; Setup parameters for call to function delay_nus
+   \   000018   7A28         MOV     R2,#0x28
+   \   00001A   7B00         MOV     R3,#0x0
+   \   00001C   12....       LCALL   ??delay_nus?relay
+    119              
+    120              /* 等待DQ变低 */
+    121              i = 20;
+   \   00001F   7E14         MOV     R6,#0x14
+   \   000021   8008         SJMP    ??DS18B20_Init_0
+    122              while(DQ && i)
+    123              {
+    124                delay_nus(10);
+   \                     ??DS18B20_Init_1:
+   \   000023                ; Setup parameters for call to function delay_nus
+   \   000023   7A0A         MOV     R2,#0xa
+   \   000025   7B00         MOV     R3,#0x0
+   \   000027   12....       LCALL   ??delay_nus?relay
+    125                  i--; 
+   \   00002A   1E           DEC     R6
+    126              }
+   \                     ??DS18B20_Init_0:
+   \   00002B   A297         MOV     C,0x90.7
+   \   00002D   5003         JNC     ??DS18B20_Init_2
+   \   00002F   EE           MOV     A,R6
+   \   000030   70F1         JNZ     ??DS18B20_Init_1
+    127              delay_nus(100);   //检测到DQ 变低后，延时60-240us
+   \                     ??DS18B20_Init_2:
+   \   000032                ; Setup parameters for call to function delay_nus
+   \   000032   7A64         MOV     R2,#0x64
+   \   000034   7B00         MOV     R3,#0x0
+   \   000036   12....       LCALL   ??delay_nus?relay
+    128              SET_OUT();        //设置IO方向为输出 CC2530->DS18B20
+   \   000039   43FE80       ORL     0xfe,#0x80
+    129              SET_DQ();         //IO拉高
+   \   00003C   D297         SETB    0x90.7
+    130          }
+   \   00003E   7F01         MOV     R7,#0x1
+   \   000040   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   000043                REQUIRE P1DIR
+   \   000043                REQUIRE _A_P1
+    131          
+    132          
+    133          /*
+    134           *    DS18B20 转换温度函数
+    135           *    输入参数：  无
+    136           *    输出参数：  无
+    137           *    返回参数：  无
+    138           *
+    139           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    140          void DS18B20_SendConvert(void)
+   \                     DS18B20_SendConvert:
+    141          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    142              DS18B20_Init();               //复位18B20
+   \   000004                ; Setup parameters for call to function DS18B20_Init
+   \   000004   12....       LCALL   ?Subroutine1 & 0xFFFF
+    143              DS18B20_Write(SKIP_ROM);      //发出跳过ROM匹配操作
+    144              DS18B20_Write(CONVERT_T);     //启动温度转换
+   \                     ??CrossCallReturnLabel_0:
+   \   000007                ; Setup parameters for call to function DS18B20_Write
+   \   000007   7944         MOV     R1,#0x44
+   \   000009   12....       LCALL   ??DS18B20_Write?relay
+    145          }
+   \   00000C   D083         POP     DPH
+   \   00000E   D082         POP     DPL
+   \   000010   02....       LJMP    ?BRET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   12....       LCALL   ??DS18B20_Init?relay
+   \   000003                ; Setup parameters for call to function DS18B20_Write
+   \   000003                ; Setup parameters for call to function DS18B20_Write
+   \   000003   79CC         MOV     R1,#-0x34
+   \   000005   12....       LCALL   ??DS18B20_Write?relay
+   \   000008   22           RET
+    146          
+    147          
+    148          /*
+    149           *    DS18B20获取温度函数
+    150           *    输入参数：  无
+    151           *    输出参数：  无
+    152           *    返回参数：  无
+    153           *
+    154           */
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    155          void DS18B20_GetTem(void)
+   \                     DS18B20_GetTem:
+    156          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+    157              unsigned char tem_h,tem_l;    //温度高位字节及低位字节
+    158              unsigned char a,b;            //临时变量
+    159              unsigned char flag;           //温度正负标记，正为0，负为1
+    160              
+    161              DS18B20_Init();               //DS18B20复位       
+   \   000005                ; Setup parameters for call to function DS18B20_Init
+   \   000005   12....       LCALL   ?Subroutine1 & 0xFFFF
+    162              DS18B20_Write(SKIP_ROM);      //跳过ROM匹配
+    163              
+    164              DS18B20_Write(RD_SCRATCHPAD); //写便笺
+   \                     ??CrossCallReturnLabel_1:
+   \   000008                ; Setup parameters for call to function DS18B20_Write
+   \   000008   79BE         MOV     R1,#-0x42
+   \   00000A   12....       LCALL   ??DS18B20_Write?relay
+    165              tem_l = DS18B20_Read();       //读温度低位
+   \   00000D                ; Setup parameters for call to function DS18B20_Read
+   \   00000D   12....       LCALL   ??DS18B20_Read?relay
+   \   000010   E9           MOV     A,R1
+   \   000011   F5..         MOV     ?V0 + 0,A
+    166              tem_h = DS18B20_Read();       //读温度高位
+   \   000013                ; Setup parameters for call to function DS18B20_Read
+   \   000013   12....       LCALL   ??DS18B20_Read?relay
+   \   000016   E9           MOV     A,R1
+   \   000017   F8           MOV     R0,A
+    167          
+    168              /* 判断温度正负 */
+    169              if(tem_h & 0x80)
+   \   000018   C4           SWAP    A
+   \   000019   54F0         ANL     A,#0xf0
+   \   00001B   F9           MOV     R1,A
+   \   00001C   E5..         MOV     A,?V0 + 0
+   \   00001E   C4           SWAP    A
+   \   00001F   540F         ANL     A,#0xf
+   \   000021   FA           MOV     R2,A
+   \   000022   E8           MOV     A,R0
+   \   000023   A2E7         MOV     C,0xE0 /* A   */.7
+   \   000025   500F         JNC     ??DS18B20_GetTem_0
+    170              {
+    171                  flag = 1;                 //温度为负
+   \   000027   7B01         MOV     R3,#0x1
+    172                  a = (tem_l>>4);           //取温度低4位原码
+   \   000029   EA           MOV     A,R2
+   \   00002A   FC           MOV     R4,A
+    173                  b = (tem_h<<4)& 0xf0;     //取温度高4位原码
+    174                  tem_h = ~(a|b) + 1;       //取整数部分数值，不符号位
+   \   00002B   49           ORL     A,R1
+   \   00002C   F4           CPL     A
+   \   00002D   04           INC     A
+   \   00002E   F8           MOV     R0,A
+    175                  
+    176                  tem_l = ~(a&0x0f) + 1;    //取小数部分原值，不含符号位
+   \   00002F   EC           MOV     A,R4
+   \   000030   F4           CPL     A
+   \   000031   04           INC     A
+   \   000032   F5..         MOV     ?V0 + 0,A
+   \   000034   8008         SJMP    ??DS18B20_GetTem_1
+    177              }
+    178              else
+    179              {
+    180                  flag = 0;                 //为正
+   \                     ??DS18B20_GetTem_0:
+   \   000036   7B00         MOV     R3,#0x0
+    181                  a = tem_h<<4;
+    182                  a += (tem_l&0xf0)>>4;     //得到整数部分值 
+    183                  b = tem_l&0x0f;           //得出小数部分值
+    184                  tem_h = a;                //整数部分
+   \   000038   E9           MOV     A,R1
+   \   000039   2A           ADD     A,R2
+   \   00003A   F8           MOV     R0,A
+    185                  tem_l = b&0xff;           //小数部分
+   \   00003B   53..0F       ANL     ?V0 + 0,#0xf
+    186              }
+    187              
+    188              sensor_data_value[0] = FRACTION_INDEX[tem_l]; //查表得小数值
+   \                     ??DS18B20_GetTem_1:
+   \   00003E   74..         MOV     A,#FRACTION_INDEX & 0xff
+   \   000040   25..         ADD     A,?V0 + 0
+   \   000042   F582         MOV     DPL,A
+   \   000044   74..         MOV     A,#(FRACTION_INDEX >> 8) & 0xff
+   \   000046   3400         ADDC    A,#0x0
+   \   000048   F583         MOV     DPH,A
+   \   00004A   E0           MOVX    A,@DPTR
+   \   00004B   90....       MOV     DPTR,#sensor_data_value
+   \   00004E   F0           MOVX    @DPTR,A
+    189              sensor_data_value[1] = tem_h| (flag<<7);      //整数部分，包括符号位
+   \   00004F   EB           MOV     A,R3
+   \   000050   A2E0         MOV     C,0xE0 /* A   */.0
+   \   000052   E4           CLR     A
+   \   000053   33           RLC     A
+   \   000054   13           RRC     A
+   \   000055   13           RRC     A
+   \   000056   48           ORL     A,R0
+   \   000057   A3           INC     DPTR
+   \   000058   F0           MOVX    @DPTR,A
+    190          }
+   \   000059   02....       LJMP    ?Subroutine0 & 0xFFFF
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for FRACTION_INDEX>`:
+   \   000000   00           DB 0
+   \   000001   01           DB 1
+   \   000002   01           DB 1
+   \   000003   02           DB 2
+   \   000004   02           DB 2
+   \   000005   03           DB 3
+   \   000006   04           DB 4
+   \   000007   04           DB 4
+   \   000008   05           DB 5
+   \   000009   06           DB 6
+   \   00000A   06           DB 6
+   \   00000B   07           DB 7
+   \   00000C   07           DB 7
+   \   00000D   08           DB 8
+   \   00000E   09           DB 9
+   \   00000F   09           DB 9
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??delay_nus?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    delay_nus
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??DS18B20_Write?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    DS18B20_Write
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??DS18B20_Read?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    DS18B20_Read
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??DS18B20_Init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    DS18B20_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??DS18B20_SendConvert?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    DS18B20_SendConvert
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??DS18B20_GetTem?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    DS18B20_GetTem
+    191          
+    192          
+    193          
+    194          
+
+   Maximum stack usage in bytes:
+
+     Function            ISTACK PSTACK XSTACK
+     --------            ------ ------ ------
+     DS18B20_GetTem          0      0     10
+       -> DS18B20_Init       0      0     20
+       -> DS18B20_Write      0      0     20
+       -> DS18B20_Write      0      0     20
+       -> DS18B20_Read       0      0     20
+       -> DS18B20_Read       0      0     20
+     DS18B20_Init            0      0     19
+       -> delay_nus          0      0     18
+       -> delay_nus          0      0     18
+       -> delay_nus          0      0     18
+       -> delay_nus          0      0     18
+     DS18B20_Read            0      0     22
+       -> delay_nus          0      0     24
+     DS18B20_SendConvert     2      0      0
+       -> DS18B20_Init       4      0      0
+       -> DS18B20_Write      4      0      0
+       -> DS18B20_Write      4      0      0
+     DS18B20_Write           0      0     20
+       -> delay_nus          0      0     20
+     delay_nus               0      0     12
+
+
+   Segment part sizes:
+
+     Function/Label                    Bytes
+     --------------                    -----
+     _A_P1                                1
+     P1DIR                                1
+     sensor_data_value                    2
+     FRACTION_INDEX                      16
+     delay_nus                           24
+     DS18B20_Write                       55
+     ?Subroutine0                         5
+     DS18B20_Read                        69
+     DS18B20_Init                        67
+     DS18B20_SendConvert                 19
+     ?Subroutine1                         9
+     DS18B20_GetTem                      92
+     ?<Initializer for FRACTION_INDEX>   16
+     ??delay_nus?relay                    6
+     ??DS18B20_Write?relay                6
+     ??DS18B20_Read?relay                 6
+     ??DS18B20_Init?relay                 6
+     ??DS18B20_SendConvert?relay          6
+     ??DS18B20_GetTem?relay               6
+
+ 
+ 340 bytes in segment BANKED_CODE
+  36 bytes in segment BANK_RELAYS
+   2 bytes in segment SFR_AN
+  16 bytes in segment XDATA_I
+  16 bytes in segment XDATA_ID
+   2 bytes in segment XDATA_Z
+ 
+ 392 bytes of CODE  memory
+   0 bytes of DATA  memory (+ 2 bytes shared)
+  18 bytes of XDATA memory
+
+Errors: none
+Warnings: none

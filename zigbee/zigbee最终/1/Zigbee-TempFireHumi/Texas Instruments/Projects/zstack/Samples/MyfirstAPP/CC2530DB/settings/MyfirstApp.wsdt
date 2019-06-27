@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>MyfirstApp/RouterEB-Pro</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>187</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1155</ColumnWidth1><ColumnWidth2>308</ColumnWidth2><ColumnWidth3>77</ColumnWidth3></Build>
+      <TerminalIO/>
+      <Debug-Log>
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1541</ColumnWidth1></Debug-Log>
+    <Disassembly><MixedMode>1</MixedMode><CodeCovShow>1</CodeCovShow><InstrProfShow>1</InstrProfShow></Disassembly></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-7756-20496</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>MyfirstApp</ExpandedNode><ExpandedNode>MyfirstApp/App</ExpandedNode><ExpandedNode>MyfirstApp/App/Coodinator</ExpandedNode><ExpandedNode>MyfirstApp/App/Router</ExpandedNode><ExpandedNode>MyfirstApp/HAL</ExpandedNode><ExpandedNode>MyfirstApp/HAL/Common</ExpandedNode><ExpandedNode>MyfirstApp/HAL/Target</ExpandedNode><ExpandedNode>MyfirstApp/HAL/Target/CC2530EB</ExpandedNode><ExpandedNode>MyfirstApp/HAL/Target/CC2530EB/Drivers</ExpandedNode><ExpandedNode>MyfirstApp/MT</ExpandedNode><ExpandedNode>MyfirstApp/NWK</ExpandedNode><ExpandedNode>MyfirstApp/OSAL</ExpandedNode><ExpandedNode>MyfirstApp/Profile</ExpandedNode><ExpandedNode>MyfirstApp/Tools</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-10140-20656</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+          
+        <Tab><Identity>TabID-2448-21347</Identity><TabName>Breakpoints</TabName><Factory>Breakpoints</Factory></Tab><Tab><Identity>TabID-7215-16682</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\Tools\CC2530DB\f8wConfig.cfg</Filename><XPos>0</XPos><YPos>145</YPos><SelStart>1923</SelStart><SelEnd>1923</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\MyfirstAppCoordManage.c</Filename><XPos>0</XPos><YPos>146</YPos><SelStart>4184</SelStart><SelEnd>4196</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Source\MyfirstAppRouterManage.c</Filename><XPos>0</XPos><YPos>226</YPos><SelStart>237</SelStart><SelEnd>237</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Components\hal\target\CC2530EB\hal_uart.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>2720</SelStart><SelEnd>2720</SelEnd></Tab><ActiveTab>3</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-04541e70><key>iaridepm.enu1</key></Toolbar-04541e70></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>643</Bottom><Right>278</Right><x>-2</x><y>-2</y><xscreen>231</xscreen><yscreen>250</yscreen><sizeHorzCX>150391</sizeHorzCX><sizeHorzCY>320102</sizeHorzCY><sizeVertCX>182292</sizeVertCX><sizeVertCY>825864</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>93</Bottom><Right>1538</Right><x>-2</x><y>-2</y><xscreen>1540</xscreen><yscreen>95</yscreen><sizeHorzCX>1002604</sizeHorzCX><sizeHorzCY>121639</sizeHorzCY><sizeVertCX>150391</sizeVertCX><sizeVertCY>320102</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

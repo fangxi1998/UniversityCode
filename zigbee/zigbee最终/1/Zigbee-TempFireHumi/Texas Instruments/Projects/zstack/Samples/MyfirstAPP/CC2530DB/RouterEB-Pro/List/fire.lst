@@ -1,0 +1,317 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         10/Jun/2019  13:31:51 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\fangxi1998\Desktop\课程设计\zigbee        #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\So #
+#                          urce\fire.c                                        #
+#    Command line       =  -f "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\Tools\CC2530DB\f8wRouter.cfg"      #
+#                          (-DCPU32MHZ -DROOT=__near_func                     #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE -DRTR_NWK         #
+#                          -DBLINK_LEDS) -f "C:\Users\fangxi1998\Desktop\课程 #
+#                          设计\zigbee 嵌入式linux\zigbee最终\1\Zigbee-TempFi #
+#                          reHumi\Texas Instruments\Projects\zstack\Samples\M #
+#                          yfirstAPP\CC2530DB\..\..\..\Tools\CC2530DB\f8wConf #
+#                          ig.cfg" (-DSECURE=0 -DZG_SECURE_DYNAMIC=0          #
+#                          -DREFLECTOR -DDEFAULT_CHANLIST=0x04000000          #
+#                          -DZDAPP_CONFIG_PAN_ID=0xA1B2                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\So #
+#                          urce\fire.c" -D ZIGBEEPRO -D ZTOOL_P1 -D MT_TASK   #
+#                          -D MT_SYS_FUNC -D MT_ZDO_FUNC -D                   #
+#                          LCD_SUPPORTED=DEBUG -lC "C:\Users\fangxi1998\Deskt #
+#                          op\课程设计\zigbee 嵌入式linux\zigbee最终\1\Zigbee #
+#                          -TempFireHumi\Texas Instruments\Projects\zstack\Sa #
+#                          mples\MyfirstAPP\CC2530DB\RouterEB-Pro\List\" -lA  #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\RouterEB-Pro\List\" --diag_suppress         #
+#                          Pe001,Pa010 -o "C:\Users\fangxi1998\Desktop\课程设 #
+#                          计\zigbee 嵌入式linux\zigbee最终\1\Zigbee-TempFire #
+#                          Humi\Texas Instruments\Projects\zstack\Samples\Myf #
+#                          irstAPP\CC2530DB\RouterEB-Pro\Obj\" -e --debug     #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 8 -I "C:\Users\fangxi1998\Deskto #
+#                          p\课程设计\zigbee 嵌入式linux\zigbee最终\1\Zigbee- #
+#                          TempFireHumi\Texas Instruments\Projects\zstack\Sam #
+#                          ples\MyfirstAPP\CC2530DB\" -I                      #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\SOURCE\" -I "C:\Users\fangxi1998\Desktop #
+#                          \课程设计\zigbee 嵌入式linux\zigbee最终\1\Zigbee-T #
+#                          empFireHumi\Texas Instruments\Projects\zstack\Samp #
+#                          les\MyfirstAPP\CC2530DB\..\..\..\ZMAIN\TI2530DB\"  #
+#                          -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\MT\" -I           #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\HAL\INCLUDE\" -I  #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\HAL\TARGET\CC2530 #
+#                          EB\" -I "C:\Users\fangxi1998\Desktop\课程设计\zigb #
+#                          ee 嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Te #
+#                          xas Instruments\Projects\zstack\Samples\MyfirstAPP #
+#                          \CC2530DB\..\..\..\..\..\COMPONENTS\OSAL\MCU\CCSOC #
+#                          \" -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee #
+#                           嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texa #
+#                          s Instruments\Projects\zstack\Samples\MyfirstAPP\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\OSAL\INCLUDE\"   #
+#                          -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\AF\" -I     #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\NWK\" -I    #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\SEC\" -I    #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\" -I   #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\SYS\" -I    #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\" -I    #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\ZMAC\F8W\" -I     #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\ZMAC\" -I         #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\SERVICES\SADDR\"  #
+#                          -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\SERVICES\SDATA\"  #
+#                          -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\MAC\INCLUDE\" -I  #
+#                          "C:\Users\fangxi1998\Desktop\课程设计\zigbee       #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\MAC\HIGH_LEVEL\"  #
+#                          -I "C:\Users\fangxi1998\Desktop\课程设计\zigbee    #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\MAC\LOW_LEVEL\srf #
+#                          04\" -I "C:\Users\fangxi1998\Desktop\课程设计\zigb #
+#                          ee 嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Te #
+#                          xas Instruments\Projects\zstack\Samples\MyfirstAPP #
+#                          \CC2530DB\..\..\..\..\..\COMPONENTS\MAC\LOW_LEVEL\ #
+#                          srf04\SINGLE_CHIP\" -Ohz                           #
+#    List file          =  C:\Users\fangxi1998\Desktop\课程设计\zigbee        #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\RouterEB-Pro\List\fire.lst                  #
+#    Object file        =  C:\Users\fangxi1998\Desktop\课程设计\zigbee        #
+#                          嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas #
+#                           Instruments\Projects\zstack\Samples\MyfirstAPP\CC #
+#                          2530DB\RouterEB-Pro\Obj\fire.r51                   #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\fangxi1998\Desktop\课程设计\zigbee 嵌入式linux\zigbee最终\1\Zigbee-TempFireHumi\Texas Instruments\Projects\zstack\Samples\MyfirstAPP\Source\fire.c
+      1          #include <ioCC2530.h>
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf4
+   \   unsigned char volatile __sfr P1SEL
+   \                     P1SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+      2          #include "fire.h"
+      3          #include "hal_types.h"
+      4          #define uint unsigned int
+      5          #define uchar unsigned char
+      6          
+      7          #define led1 P1_0
+      8          #define led2 P1_1
+      9          #define led3 P1_2
+     10          #define led4 P1_3
+     11          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     12          uint8 fire = 0;
+   \                     fire:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     13          uchar a,b;
+   \                     `a`:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+   \                     `b`:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     14          unsigned char _a[3];
+   \                     _a:
+   \   000000                DS 3
+   \   000003                REQUIRE __INIT_XDATA_Z
+     15          
+     16          //io及外部中断初始化
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     17          void io_init(void)
+   \                     io_init:
+     18          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     19            //1.4 1.5 为输入
+     20            P1DIR &= ~((1 << 4)|(1 << 5));  //  (0x00010000 | 0x00100000)=> 0x00110000  ~=> 0x11001111   //设为输入
+   \   000000   53FECF       ANL     0xfe,#0xcf
+     21            P1SEL &= ~((1 << 4)|(1 << 5));
+   \   000003   53F4CF       ANL     0xf4,#0xcf
+     22            
+     23          }
+   \   000006   02....       LJMP    ?BRET
+   \   000009                REQUIRE P1DIR
+   \   000009                REQUIRE P1SEL
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     24          void getfire(void)   
+   \                     getfire:
+     25          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     26              a=P1;
+   \   000004   E590         MOV     A,0x90
+   \   000006   90....       MOV     DPTR,#`a`
+   \   000009   F0           MOVX    @DPTR,A
+     27              //若4 5 口为1
+     28              b=(~a&0x30);   // 0x00110000 & 0x00110000  = 0x00110000
+   \   00000A   F4           CPL     A
+   \   00000B   5430         ANL     A,#0x30
+   \   00000D   90....       MOV     DPTR,#`b`
+   \   000010   F0           MOVX    @DPTR,A
+     29              if(b)  
+   \   000011   90....       MOV     DPTR,#_a
+   \   000014   6004         JZ      ??getfire_0
+     30                _a[0]='1'; //有火焰
+   \   000016   7431         MOV     A,#0x31
+   \   000018   8002         SJMP    ??getfire_1
+     31              else 
+     32                _a[0]='0'; //无火焰
+   \                     ??getfire_0:
+   \   00001A   7430         MOV     A,#0x30
+   \                     ??getfire_1:
+   \   00001C   F0           MOVX    @DPTR,A
+     33           }
+   \   00001D   D083         POP     DPH
+   \   00001F   D082         POP     DPL
+   \   000021   02....       LJMP    ?BRET
+   \   000024                REQUIRE _A_P1
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??io_init?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    io_init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??getfire?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    getfire
+
+   Maximum stack usage in bytes:
+
+     Function ISTACK PSTACK XSTACK
+     -------- ------ ------ ------
+     getfire      2      0      0
+     io_init      0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label  Bytes
+     --------------  -----
+     _A_P1              1
+     P1SEL              1
+     P1DIR              1
+     fire               1
+     a                  1
+     b                  1
+     _a                 3
+     io_init            9
+     getfire           36
+     ??io_init?relay    6
+     ??getfire?relay    6
+
+ 
+ 45 bytes in segment BANKED_CODE
+ 12 bytes in segment BANK_RELAYS
+  3 bytes in segment SFR_AN
+  6 bytes in segment XDATA_Z
+ 
+ 57 bytes of CODE  memory
+  0 bytes of DATA  memory (+ 3 bytes shared)
+  6 bytes of XDATA memory
+
+Errors: none
+Warnings: none

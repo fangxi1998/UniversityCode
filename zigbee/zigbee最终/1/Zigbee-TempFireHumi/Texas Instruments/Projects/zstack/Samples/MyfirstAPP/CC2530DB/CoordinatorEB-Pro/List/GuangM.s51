@@ -1,0 +1,652 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                            /
+// IAR C/C++ Compiler V8.10.3.10338/W32 for 8051        19/Jun/2019  14:08:37 /
+// Copyright 2004-2011 IAR Systems AB.                                        /
+//                                                                            /
+//    Core               =  plain                                             /
+//    Code model         =  banked                                            /
+//    Data model         =  large                                             /
+//    Calling convention =  xdata reentrant                                   /
+//    Constant location  =  data_rom                                          /
+//    Dptr setup         =  1,16                                              /
+//    Source file        =  C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee       /
+//                          «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texa /
+//                          s Instruments\Projects\zstack\Samples\MyfirstAPP\ /
+//                          Source\GuangM.c                                   /
+//    Command line       =  -f "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee   /
+//                          «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texa /
+//                          s Instruments\Projects\zstack\Samples\MyfirstAPP\ /
+//                          CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg"    /
+//                          (-DCPU32MHZ -DROOT=__near_func                    /
+//                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                  /
+//                          -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f      /
+//                          "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee      /
+//                          «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texa /
+//                          s Instruments\Projects\zstack\Samples\MyfirstAPP\ /
+//                          CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"   /
+//                          (-DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR     /
+//                          -DDEFAULT_CHANLIST=0x04000000                     /
+//                          -DZDAPP_CONFIG_PAN_ID=0xA1B2                      /
+//                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_M /
+//                          ASK=0x007F -DBEACON_REQUEST_DELAY=100             /
+//                          -DBEACON_REQ_DELAY_MASK=0x00FF                    /
+//                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_P /
+//                          OLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7           /
+//                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3   /
+//                          -DNWK_MAX_DATA_RETRIES=2                          /
+//                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9        /
+//                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40          /
+//                          -DNWK_MAX_BINDING_ENTRIES=4                       /
+//                          -DMAX_BINDING_CLUSTER_IDS=4                       /
+//                          "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07, 0x09,     /
+//                          0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08,   /
+//                          0x0A, 0x0C, 0x0D}" -DMAC_MAX_FRAME_SIZE=116       /
+//                          "-DCONST=const __code" -DGENERIC=__generic        /
+//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000       /
+//                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
+//                          -DREJOIN_POLL_RATE=440 "C:\Users\fangxi1998\Deskt /
+//                          op\øŒ≥Ã…Ëº∆\zigbee «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbe /
+//                          e-TempFireHumi\Texas Instruments\Projects\zstack\ /
+//                          Samples\MyfirstAPP\Source\GuangM.c" -D ZIGBEEPRO  /
+//                          -D ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D          /
+//                          MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG -D             /
+//                          DH_AD_KEY_DEVICE -lC "C:\Users\fangxi1998\Desktop /
+//                          \øŒ≥Ã…Ëº∆\zigbee «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee- /
+//                          TempFireHumi\Texas Instruments\Projects\zstack\Sa /
+//                          mples\MyfirstAPP\CC2530DB\CoordinatorEB-Pro\List\ /
+//                          " -lA "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbe /
+//                          e «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Te /
+//                          xas Instruments\Projects\zstack\Samples\MyfirstAP /
+//                          P\CC2530DB\CoordinatorEB-Pro\List\"               /
+//                          --diag_suppress Pe001,Pa010 -o                    /
+//                          "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee      /
+//                          «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texa /
+//                          s Instruments\Projects\zstack\Samples\MyfirstAPP\ /
+//                          CC2530DB\CoordinatorEB-Pro\Obj\" -e --debug       /
+//                          --core=plain --dptr=16,1 --data_model=large       /
+//                          --code_model=banked --calling_convention=xdata_re /
+//                          entrant --place_constants=data_rom                /
+//                          --nr_virtual_regs 8 -I "C:\Users\fangxi1998\Deskt /
+//                          op\øŒ≥Ã…Ëº∆\zigbee «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbe /
+//                          e-TempFireHumi\Texas Instruments\Projects\zstack\ /
+//                          Samples\MyfirstAPP\CC2530DB\" -I                  /
+//                          "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee      /
+//                          «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texa /
+//                          s Instruments\Projects\zstack\Samples\MyfirstAPP\ /
+//                          CC2530DB\..\SOURCE\" -I                           /
+//                          "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee      /
+//                          «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texa /
+//                          s Instruments\Projects\zstack\Samples\MyfirstAPP\ /
+//                          CC2530DB\..\..\..\ZMAIN\TI2530DB\" -I             /
+//                          "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee      /
+//                          «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texa /
+//                          s Instruments\Projects\zstack\Samples\MyfirstAPP\ /
+//                          CC2530DB\..\..\..\..\..\COMPONENTS\MT\" -I        /
+//                          "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee      /
+//                          «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texa /
+//                          s Instruments\Projects\zstack\Samples\MyfirstAPP\ /
+//                          CC2530DB\..\..\..\..\..\COMPONENTS\HAL\INCLUDE\"  /
+//                          -I "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee   /
+//                          «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texa /
+//                          s Instruments\Projects\zstack\Samples\MyfirstAPP\ /
+//                          CC2530DB\..\..\..\..\..\COMPONENTS\HAL\TARGET\CC2 /
+//                          530EB\" -I "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\ /
+//                          zigbee «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHu /
+//                          mi\Texas Instruments\Projects\zstack\Samples\Myfi /
+//                          rstAPP\CC2530DB\..\..\..\..\..\COMPONENTS\OSAL\MC /
+//                          U\CCSOC\" -I "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº /
+//                          ∆\zigbee «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFire /
+//                          Humi\Texas Instruments\Projects\zstack\Samples\My /
+//                          firstAPP\CC2530DB\..\..\..\..\..\COMPONENTS\OSAL\ /
+//                          INCLUDE\" -I "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº /
+//                          ∆\zigbee «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFire /
+//                          Humi\Texas Instruments\Projects\zstack\Samples\My /
+//                          firstAPP\CC2530DB\..\..\..\..\..\COMPONENTS\STACK /
+//                          \AF\" -I "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zi /
+//                          gbee «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi /
+//                          \Texas Instruments\Projects\zstack\Samples\Myfirs /
+//                          tAPP\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\NWK /
+//                          \" -I "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbe /
+//                          e «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Te /
+//                          xas Instruments\Projects\zstack\Samples\MyfirstAP /
+//                          P\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\SEC\"  /
+//                          -I "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee   /
+//                          «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texa /
+//                          s Instruments\Projects\zstack\Samples\MyfirstAPP\ /
+//                          CC2530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\"   /
+//                          -I "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee   /
+//                          «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texa /
+//                          s Instruments\Projects\zstack\Samples\MyfirstAPP\ /
+//                          CC2530DB\..\..\..\..\..\COMPONENTS\STACK\SYS\"    /
+//                          -I "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee   /
+//                          «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texa /
+//                          s Instruments\Projects\zstack\Samples\MyfirstAPP\ /
+//                          CC2530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\"    /
+//                          -I "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee   /
+//                          «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texa /
+//                          s Instruments\Projects\zstack\Samples\MyfirstAPP\ /
+//                          CC2530DB\..\..\..\..\..\COMPONENTS\ZMAC\F8W\" -I  /
+//                          "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee      /
+//                          «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texa /
+//                          s Instruments\Projects\zstack\Samples\MyfirstAPP\ /
+//                          CC2530DB\..\..\..\..\..\COMPONENTS\ZMAC\" -I      /
+//                          "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee      /
+//                          «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texa /
+//                          s Instruments\Projects\zstack\Samples\MyfirstAPP\ /
+//                          CC2530DB\..\..\..\..\..\COMPONENTS\SERVICES\SADDR /
+//                          \" -I "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbe /
+//                          e «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Te /
+//                          xas Instruments\Projects\zstack\Samples\MyfirstAP /
+//                          P\CC2530DB\..\..\..\..\..\COMPONENTS\SERVICES\SDA /
+//                          TA\" -I "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zig /
+//                          bee «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\ /
+//                          Texas Instruments\Projects\zstack\Samples\Myfirst /
+//                          APP\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\INCLUD /
+//                          E\" -I "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigb /
+//                          ee «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\T /
+//                          exas Instruments\Projects\zstack\Samples\MyfirstA /
+//                          PP\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\HIGH_LE /
+//                          VEL\" -I "C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zi /
+//                          gbee «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi /
+//                          \Texas Instruments\Projects\zstack\Samples\Myfirs /
+//                          tAPP\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\LOW_L /
+//                          EVEL\srf04\" -I "C:\Users\fangxi1998\Desktop\øŒ≥Ã /
+//                          …Ëº∆\zigbee «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempF /
+//                          ireHumi\Texas Instruments\Projects\zstack\Samples /
+//                          \MyfirstAPP\CC2530DB\..\..\..\..\..\COMPONENTS\MA /
+//                          C\LOW_LEVEL\srf04\SINGLE_CHIP\" -Ohz              /
+//                          --require_prototypes                              /
+//    List file          =  C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee       /
+//                          «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texa /
+//                          s Instruments\Projects\zstack\Samples\MyfirstAPP\ /
+//                          CC2530DB\CoordinatorEB-Pro\List\GuangM.s51        /
+//                                                                            /
+//                                                                            /
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME GuangM
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN ?ALLOC_XSTACK8
+        EXTERN ?BANKED_ENTER_XDATA
+        EXTERN ?BANKED_LEAVE_XDATA
+        EXTERN ?BDISPATCH
+        EXTERN ?BRET
+        EXTERN ?DEALLOC_XSTACK8
+        EXTERN ?FLT_DIV
+        EXTERN ?FLT_MUL
+        EXTERN ?FLT_SUB
+        EXTERN ?FLT_TO_L
+        EXTERN ?L_MOV_X
+        EXTERN ?UL_TO_FLT
+        EXTERN ?V0
+        EXTERN ?XSP
+        EXTERN ?XSTACK_DISP0_8
+        EXTERN __INIT_XDATA_Z
+
+        PUBLIC ??InitADC?relay
+        FUNCTION ??InitADC?relay,0203H
+        PUBLIC ??getGuangM?relay
+        FUNCTION ??getGuangM?relay,0203H
+        PUBWEAK ADCCON1
+        PUBWEAK ADCCON3
+        PUBWEAK ADCH
+        PUBWEAK ADCL
+        PUBWEAK APCFG
+        PUBLIC InitADC
+        FUNCTION InitADC,0203H
+        ARGFRAME XSTACK, 18, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUBWEAK P0DIR
+        PUBWEAK _A_TCON
+        PUBWEAK __Constant_40533333
+        PUBWEAK __Constant_41200000
+        PUBWEAK __Constant_42c80000
+        PUBWEAK __Constant_46fff800
+        PUBLIC getGuangM
+        FUNCTION getGuangM,021203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 4, STACK
+        LOCFRAME XSTACK, 18, STACK
+        PUBLIC lightdata
+        
+        CFI Names cfiNames0
+        CFI StackFrame CFA_SP SP IDATA
+        CFI StackFrame CFA_PSP16 PSP16 XDATA
+        CFI StackFrame CFA_XSP16 XSP16 XDATA
+        CFI StaticOverlayFrame CFA_IOVERLAY IOVERLAY
+        CFI StaticOverlayFrame CFA_DOVERLAY DOVERLAY
+        CFI Resource `PSW.CY`:1, `B.BR0`:1, `B.BR1`:1, `B.BR2`:1, `B.BR3`:1
+        CFI Resource `B.BR4`:1, `B.BR5`:1, `B.BR6`:1, `B.BR7`:1, `VB.BR8`:1
+        CFI Resource `VB.BR9`:1, `VB.BR10`:1, `VB.BR11`:1, `VB.BR12`:1
+        CFI Resource `VB.BR13`:1, `VB.BR14`:1, `VB.BR15`:1, VB:8, B:8, A:8
+        CFI Resource PSW:8, DPL0:8, DPH0:8, R0:8, R1:8, R2:8, R3:8, R4:8, R5:8
+        CFI Resource R6:8, R7:8, V0:8, V1:8, V2:8, V3:8, V4:8, V5:8, V6:8, V7:8
+        CFI Resource SP:8, PSPH:8, PSPL:8, PSP16:16, XSPH:8, XSPL:8, XSP16:16
+        CFI VirtualResource ?RET:24
+        CFI Resource ?BRET_EXT:8
+        CFI VirtualResource ?RET_HIGH:8, ?RET_LOW:8
+        CFI ResourceParts PSP16 PSPH, PSPL
+        CFI ResourceParts XSP16 XSPH, XSPL
+        CFI ResourceParts ?RET ?BRET_EXT, ?RET_HIGH, ?RET_LOW
+        CFI EndNames cfiNames0
+        
+        CFI Common cfiCommon0 Using cfiNames0
+        CFI CodeAlign 1
+        CFI DataAlign -1
+        CFI ReturnAddress ?RET CODE
+        CFI CFA_DOVERLAY Used
+        CFI CFA_IOVERLAY Used
+        CFI CFA_SP SP+-3
+        CFI CFA_PSP16 PSP16+0
+        CFI CFA_XSP16 XSP16+0
+        CFI `PSW.CY` SameValue
+        CFI `B.BR0` SameValue
+        CFI `B.BR1` SameValue
+        CFI `B.BR2` SameValue
+        CFI `B.BR3` SameValue
+        CFI `B.BR4` SameValue
+        CFI `B.BR5` SameValue
+        CFI `B.BR6` SameValue
+        CFI `B.BR7` SameValue
+        CFI `VB.BR8` SameValue
+        CFI `VB.BR9` SameValue
+        CFI `VB.BR10` SameValue
+        CFI `VB.BR11` SameValue
+        CFI `VB.BR12` SameValue
+        CFI `VB.BR13` SameValue
+        CFI `VB.BR14` SameValue
+        CFI `VB.BR15` SameValue
+        CFI VB SameValue
+        CFI B Undefined
+        CFI A Undefined
+        CFI PSW SameValue
+        CFI DPL0 SameValue
+        CFI DPH0 SameValue
+        CFI R0 Undefined
+        CFI R1 Undefined
+        CFI R2 Undefined
+        CFI R3 Undefined
+        CFI R4 Undefined
+        CFI R5 Undefined
+        CFI R6 SameValue
+        CFI R7 SameValue
+        CFI V0 SameValue
+        CFI V1 SameValue
+        CFI V2 SameValue
+        CFI V3 SameValue
+        CFI V4 SameValue
+        CFI V5 SameValue
+        CFI V6 SameValue
+        CFI V7 SameValue
+        CFI PSPH Undefined
+        CFI PSPL Undefined
+        CFI XSPH Undefined
+        CFI XSPL Undefined
+        CFI ?RET Concat
+        CFI ?BRET_EXT Frame(CFA_SP, 3)
+        CFI ?RET_HIGH Frame(CFA_SP, 2)
+        CFI ?RET_LOW Frame(CFA_SP, 1)
+        CFI EndCommon cfiCommon0
+        
+InitADC             SYMBOL "InitADC"
+??InitADC?relay     SYMBOL "?relay", InitADC
+getGuangM           SYMBOL "getGuangM"
+??getGuangM?relay   SYMBOL "?relay", getGuangM
+
+// C:\Users\fangxi1998\Desktop\øŒ≥Ã…Ëº∆\zigbee «∂»Î Ωlinux\zigbee◊Ó÷’\1\Zigbee-TempFireHumi\Texas Instruments\Projects\zstack\Samples\MyfirstAPP\Source\GuangM.c
+//    1 #include "GuangM.h"
+
+        ASEGN SFR_AN:DATA:NOROOT,088H
+// union <unnamed> volatile __sfr _A_TCON
+_A_TCON:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0b4H
+// unsigned char volatile __sfr ADCCON1
+ADCCON1:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0b6H
+// unsigned char volatile __sfr ADCCON3
+ADCCON3:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0baH
+// unsigned char volatile __sfr ADCL
+ADCL:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0bbH
+// unsigned char volatile __sfr ADCH
+ADCH:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f2H
+// unsigned char volatile __sfr APCFG
+APCFG:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0fdH
+// unsigned char volatile __sfr P0DIR
+P0DIR:
+        DATA8
+        DS 1
+
+        RSEG XDATA_Z:XDATA:NOROOT(0)
+        DATA32
+//    2 unsigned char lightdata[4];
+lightdata:
+        DS 4
+        REQUIRE __INIT_XDATA_Z
+//    3  
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//    4 void InitADC(void){
+InitADC:
+        CFI Block cfiBlock0 Using cfiCommon0
+        CFI Function InitADC
+        CODE
+        ; Saved register size: 0
+        ; Auto size: 0
+//    5 
+//    6     P0DIR&=0x7f;
+        ANL     0xfd,#0x7f
+//    7   ADCIF=0;
+        CLR     0x88.5
+//    8   ADCH&=0x00;
+        MOV     A,0xbb
+        MOV     0xbb,#0x0
+//    9   APCFG|=0x80;
+        ORL     0xf2,#0x80
+//   10   ADCCON3=0xb7;
+        MOV     0xb6,#-0x49
+//   11   while(!(ADCCON1&0x80));
+??InitADC_0:
+        MOV     A,0xb4
+        MOV     C,0xE0 /* A   */.7
+        JNC     ??InitADC_0
+//   12 /*
+//   13   ADCH&=0x00;
+//   14   ADCL&=0x00;//ºƒ¥Ê∆˜«Â¡„
+//   15   ADCCFG|=0x80;      // p0.7 Œ™1   1000 0000
+//   16   ADCCON3=0xB7;//1011 0111
+//   17   ADCCON1=0x30;   //    0011 0000 ST// ÷∂Ø∆Ù∂Øƒ£ Ω  
+//   18   ADCCON1|=0x40;//0100 0000    
+//   19   
+//   20 */
+//   21 }
+        LJMP    ?BRET
+        CFI EndBlock cfiBlock0
+        REQUIRE P0DIR
+        REQUIRE _A_TCON
+        REQUIRE ADCH
+        REQUIRE APCFG
+        REQUIRE ADCCON3
+        REQUIRE ADCCON1
+//   22 
+//   23 
+//   24 
+
+        RSEG BANKED_CODE:CODE:NOROOT(0)
+//   25 void getGuangM(void){
+getGuangM:
+        CFI Block cfiBlock1 Using cfiCommon0
+        CFI Function getGuangM
+        CODE
+        FUNCALL getGuangM, InitADC
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 18, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 18, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV     A,#-0x10
+        LCALL   ?BANKED_ENTER_XDATA
+        CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+        CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+        CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+        CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+        CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+        CFI V7 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+        CFI V6 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+        CFI V5 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+        CFI V4 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+        CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+        CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+        CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
+        CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+        CFI VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
+        CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
+        CFI CFA_SP SP+0
+        CFI CFA_XSP16 add(XSP16, 16)
+        ; Saved register size: 16
+        ; Auto size: 2
+        MOV     A,#-0x2
+        LCALL   ?ALLOC_XSTACK8
+        CFI CFA_XSP16 add(XSP16, 18)
+//   26  unsigned char send_buf[2];
+//   27  unsigned int light;
+//   28   float num;
+//   29   InitADC();
+        ; Setup parameters for call to function InitADC
+        LCALL   ??InitADC?relay
+//   30  
+//   31 
+//   32   send_buf[0]=ADCH;
+        MOV     A,0xbb
+        MOV     DPL,?XSP + 0
+        MOV     DPH,?XSP + 1
+        MOVX    @DPTR,A
+//   33   send_buf[1]=ADCL;
+        MOV     A,0xba
+        PUSH    A
+        CFI CFA_SP SP+-1
+        MOV     A,#0x1
+        LCALL   ?XSTACK_DISP0_8
+        POP     A
+        CFI CFA_SP SP+0
+        MOVX    @DPTR,A
+//   34 	//1111 1111 1111 11xx->3.3v
+//   35     light =(unsigned int)send_buf[1];// 0000 0000 xxxx xxxx
+//   36     light|=((unsigned int)send_buf[0])<<8;//◊Û“∆∞ÀŒª ªÚ‘ÀÀ„
+        MOV     R2,A
+        MOV     DPL,?XSP + 0
+        MOV     DPH,?XSP + 1
+        MOVX    A,@DPTR
+        MOV     R1,A
+        MOV     A,R2
+        MOV     R0,A
+//   37     // adc = 0111 1111 1111 1100 = 32764 ->3.3v
+//   38     if(light&0x8000)light=0;
+        MOV     A,R1
+        ANL     A,#0x80
+        JZ      ??getGuangM_0
+        MOV     R0,#0x0
+        MOV     R1,#0x0
+//   39     num=light*3.3/32764;//2^14
+//   40     //∏°µ„–Õ◊™ªªŒ™◊÷∑˚–Õ
+//   41     num=(3.3-num)/3.3*100;
+??getGuangM_0:
+        MOV     ?V0 + 0,#0x33
+        MOV     ?V0 + 1,#0x33
+        MOV     ?V0 + 2,#0x53
+        PUSH    ?V0 + 0
+        CFI CFA_SP SP+-1
+        PUSH    ?V0 + 1
+        CFI CFA_SP SP+-2
+        PUSH    ?V0 + 2
+        CFI CFA_SP SP+-3
+        MOV     ?V0 + 0,R0
+        MOV     ?V0 + 1,R1
+        CLR     A
+        MOV     ?V0 + 2,A
+        MOV     ?V0 + 3,A
+        MOV     R0,#?V0 + 0
+        LCALL   ?UL_TO_FLT
+        MOV     DPTR,#__Constant_40533333
+        MOV     R0,#?V0 + 4
+        LCALL   ?L_MOV_X
+        MOV     R0,#?V0 + 0
+        MOV     R1,#?V0 + 4
+        LCALL   ?FLT_MUL
+        MOV     DPTR,#__Constant_46fff800
+        MOV     R0,#?V0 + 4
+        LCALL   ?L_MOV_X
+        MOV     R0,#?V0 + 0
+        MOV     R1,#?V0 + 4
+        LCALL   ?FLT_DIV
+        MOV     ?V0 + 7,#0x40
+        POP     ?V0 + 6
+        CFI CFA_SP SP+-2
+        POP     ?V0 + 5
+        CFI CFA_SP SP+-1
+        POP     ?V0 + 4
+        CFI CFA_SP SP+0
+        MOV     R0,#?V0 + 4
+        MOV     R1,#?V0 + 0
+        LCALL   ?FLT_SUB
+        MOV     DPTR,#__Constant_40533333
+        MOV     R0,#?V0 + 0
+        LCALL   ?L_MOV_X
+        MOV     R0,#?V0 + 4
+        MOV     R1,#?V0 + 0
+        LCALL   ?FLT_DIV
+        MOV     DPTR,#__Constant_42c80000
+        MOV     R0,#?V0 + 0
+        LCALL   ?L_MOV_X
+        MOV     R0,#?V0 + 4
+        MOV     R1,#?V0 + 0
+        LCALL   ?FLT_MUL
+//   42     lightdata[0]=(char)(num)/10+0x30;
+        MOV     ?V0 + 0,?V0 + 4
+        MOV     ?V0 + 1,?V0 + 5
+        MOV     ?V0 + 2,?V0 + 6
+        MOV     ?V0 + 3,?V0 + 7
+        MOV     R0,#?V0 + 0
+        LCALL   ?FLT_TO_L
+        MOV     R0,?V0 + 0
+        MOV     B,#0xa
+        MOV     A,R0
+        DIV     AB
+        ADD     A,#0x30
+        MOV     DPTR,#lightdata
+        MOVX    @DPTR,A
+//   43     lightdata[1]=(char)(num)%10+0x30;
+        MOV     A,R0
+        MOV     B,#0xa
+        DIV     AB
+        MOV     A,B
+        ADD     A,#0x30
+        INC     DPTR
+        MOVX    @DPTR,A
+//   44     lightdata[3]=(char)(num*10)%10+0x30;
+        MOV     DPTR,#__Constant_41200000
+        MOV     R0,#?V0 + 0
+        LCALL   ?L_MOV_X
+        MOV     R0,#?V0 + 4
+        MOV     R1,#?V0 + 0
+        LCALL   ?FLT_MUL
+        MOV     R0,#?V0 + 4
+        LCALL   ?FLT_TO_L
+        MOV     A,?V0 + 4
+        MOV     B,#0xa
+        DIV     AB
+        MOV     A,B
+        ADD     A,#0x30
+        MOV     DPTR,#lightdata + 3
+        MOVX    @DPTR,A
+//   45    
+//   46     
+//   47     
+//   48     
+//   49     
+//   50   
+//   51   
+//   52   
+//   53 
+//   54 }
+        MOV     A,#0x2
+        LCALL   ?DEALLOC_XSTACK8
+        CFI CFA_XSP16 add(XSP16, 16)
+        MOV     R7,#0x8
+        LJMP    ?BANKED_LEAVE_XDATA
+        CFI EndBlock cfiBlock1
+        REQUIRE ADCH
+        REQUIRE ADCL
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_40533333:
+        DD 40533333H
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_46fff800:
+        DD 46FFF800H
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_42c80000:
+        DD 42C80000H
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_41200000:
+        DD 41200000H
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??InitADC?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    InitADC
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+??getGuangM?relay:
+        LCALL   ?BDISPATCH
+        DATA
+        DC24    getGuangM
+
+        END
+// 
+// 269 bytes in segment BANKED_CODE
+//  12 bytes in segment BANK_RELAYS
+//   7 bytes in segment SFR_AN
+//  16 bytes in segment XDATA_ROM_C
+//   4 bytes in segment XDATA_Z
+// 
+// 281 bytes of CODE  memory
+//   0 bytes of CONST memory (+ 16 bytes shared)
+//   0 bytes of DATA  memory (+  7 bytes shared)
+//   4 bytes of XDATA memory
+//
+//Errors: none
+//Warnings: none

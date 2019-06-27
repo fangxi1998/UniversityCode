@@ -9,3 +9,6 @@
 # python Test
 > python 学习中的小测试代码 方便学习python
 
+
+# zigbee
+>两个zigbee路由节点采集数据 发送到协调节点 协调节点通过串口发给树莓派 树莓派与Android建立TCP连接 传输数据

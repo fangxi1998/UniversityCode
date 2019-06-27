@@ -1,0 +1,484 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         16/Dec/2014  18:18:09 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  E:\Zigbee-timer\Texas Instruments\Projects\zstack\ #
+#                          Samples\MyfirstAPP\Source\Light.c                  #
+#    Command line       =  -f "E:\Zigbee-timer\Texas                          #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"        #
+#                          (-DCPU32MHZ -DROOT=__near_func -DBLINK_LEDS) -f    #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\Tools\CC2530 #
+#                          DB\f8wConfig.cfg" (-DSECURE=0                      #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x02000000                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xA1B2                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\Source\Light.c" -D ZIGBEEPRO   #
+#                          -D NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D         #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG  #
+#                          -D xPOWER_SAVING -lC "E:\Zigbee-timer\Texas        #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\EndDeviceEB-Pro\List\" -lA                   #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\EndDeviceEB-Pro\List\ #
+#                          " --diag_suppress Pe001,Pa010 -o                   #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\EndDeviceEB-Pro\Obj\" #
+#                           -e --debug --core=plain --dptr=16,1               #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 8 -I  #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\" -I                  #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\SOURCE\" -I        #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\ZMAIN\TI2530 #
+#                          DB\" -I "E:\Zigbee-timer\Texas                     #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\MT\" -I            #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\HAL\INCLUDE\" -I "E:\Zigbee-timer\Texas       #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\HAL\TARGET\CC2530E #
+#                          B\" -I "E:\Zigbee-timer\Texas                      #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\OSAL\MCU\CCSOC\"   #
+#                          -I "E:\Zigbee-timer\Texas                          #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\OSAL\INCLUDE\" -I  #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\STACK\AF\" -I "E:\Zigbee-timer\Texas          #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\STACK\NWK\" -I     #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\STACK\SEC\" -I "E:\Zigbee-timer\Texas         #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\" -I    #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\STACK\SYS\" -I "E:\Zigbee-timer\Texas         #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\" -I     #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\ZMAC\F8W\" -I "E:\Zigbee-timer\Texas          #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\ZMAC\" -I          #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\SERVICES\SADDR\" -I "E:\Zigbee-timer\Texas    #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\SERVICES\SDATA\"   #
+#                          -I "E:\Zigbee-timer\Texas                          #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\MAC\INCLUDE\" -I   #
+#                          "E:\Zigbee-timer\Texas Instruments\Projects\zstack #
+#                          \Samples\MyfirstAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\MAC\HIGH_LEVEL\" -I "E:\Zigbee-timer\Texas    #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\MAC\LOW_LEVEL\srf0 #
+#                          4\" -I "E:\Zigbee-timer\Texas                      #
+#                          Instruments\Projects\zstack\Samples\MyfirstAPP\CC2 #
+#                          530DB\..\..\..\..\..\COMPONENTS\MAC\LOW_LEVEL\srf0 #
+#                          4\SINGLE_CHIP\" -Ohz --require_prototypes          #
+#    List file          =  E:\Zigbee-timer\Texas Instruments\Projects\zstack\ #
+#                          Samples\MyfirstAPP\CC2530DB\EndDeviceEB-Pro\List\L #
+#                          ight.lst                                           #
+#    Object file        =  E:\Zigbee-timer\Texas Instruments\Projects\zstack\ #
+#                          Samples\MyfirstAPP\CC2530DB\EndDeviceEB-Pro\Obj\Li #
+#                          ght.r51                                            #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+E:\Zigbee-timer\Texas Instruments\Projects\zstack\Samples\MyfirstAPP\Source\Light.c
+      1          #include <ioCC2530.h>
+
+   \                                 In  segment SFR_AN, at 0xb4
+   \   unsigned char volatile __sfr ADCCON1
+   \                     ADCCON1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xb6
+   \   unsigned char volatile __sfr ADCCON3
+   \                     ADCCON3:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xba
+   \   unsigned char volatile __sfr ADCL
+   \                     ADCL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xbb
+   \   unsigned char volatile __sfr ADCH
+   \                     ADCH:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf2
+   \   unsigned char volatile __sfr ADCCFG
+   \                     ADCCFG:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+      2          #include "light.h"
+      3          #include "hal_types.h"
+      4          
+      5          
+      6          //#include "hal_lcd.h"
+      7          
+      8          //#define uint unsigned int
+      9          //#define uchar unsigned char
+     10          
+     11          
+     12          
+     13          //#define led1 P1_0
+     14          //#define led2 P1_1
+     15          //#define led3 P1_2
+     16          //#define led4 P1_3
+     17          
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     18          unsigned char temp[2];
+   \                     temp:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     19          unsigned short adc=0;
+   \                     adc:
+   \   000000                DS 2
+   \   000002                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     20          unsigned char  adc_value =0;
+   \                     adc_value:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     21          float v;
+   \                     v:
+   \   000000                DS 4
+   \   000004                REQUIRE __INIT_XDATA_Z
+     22          //uint8 ge,shi;;
+     23          
+     24          //unsigned char ASCII[16] = "0123456789ABCDEF";
+     25          
+     26          //延时子函数
+     27          //void Delay(uint n)  
+     28          //{
+     29          //     uint tt;
+     30          //     for(tt=0;tt<n;tt++);
+     31          //     for(tt=0;tt<n;tt++);
+     32          //     for(tt=0;tt<n;tt++);
+     33           //    for(tt=0;tt<n;tt++);
+     34           //    for(tt=0;tt<n;tt++);
+     35          //}
+     36          
+     37          
+     38          
+     39          //LED灯初始化
+     40          //void led_init(void)
+     41          //{
+     42           //  //P1为普通 I/O 口
+     43          //   P1SEL =0x00; 
+     44          //   // P1.0 P1.1 P1.2 P1.3 输出
+     45          //   P1DIR = 0x0F;          
+     46             //关闭LED1
+     47          //   led1=1;
+     48             //关闭LED2
+     49           //  led2=1;
+     50             //关闭LED3
+     51          //   led3=1;
+     52             //关闭LED4
+     53          //   led4=1;
+     54             
+     55          //}
+     56          
+     57          
+     58          /****************************************************************
+     59          *函数功能 ：初始化ADC						*
+     60          *入口参数 ：无					        	*
+     61          *返 回 值 ：无							*
+     62          *说    明 ：参考电压AVDD，转换对象是1/3AVDD			*
+     63          ****************************************************************/
+     64          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     65          void InitialAD( void )  
+   \                     InitialAD:
+     66               {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     67                  P0DIR &= ~(1<<7); 
+   \   000000   53FD7F       ANL     0xfd,#0x7f
+     68                  ADCH &= 0X00;
+   \   000003   E5BB         MOV     A,0xbb
+   \   000005   75BB00       MOV     0xbb,#0x0
+     69                  ADCCFG |=  (1<<7);
+   \   000008   43F280       ORL     0xf2,#0x80
+     70                  ADCCON3 = 0xa7;
+   \   00000B   75B6A7       MOV     0xb6,#-0x59
+     71                  
+     72                  ADCCON1 = 0X30;	
+   \   00000E   75B430       MOV     0xb4,#0x30
+     73              
+     74                  //启动A/D
+     75                  ADCCON1 |= 0X40;	
+   \   000011   43B440       ORL     0xb4,#0x40
+     76                  
+     77          
+     78               }
+   \   000014   02....       LJMP    ?BRET
+   \   000017                REQUIRE P0DIR
+   \   000017                REQUIRE ADCH
+   \   000017                REQUIRE ADCCFG
+   \   000017                REQUIRE ADCCON3
+   \   000017                REQUIRE ADCCON1
+     79          
+     80          //主函数
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     81          unsigned char Light_GetAdc(void)  
+   \                     Light_GetAdc:
+     82          {
+   \   000000   74F0         MOV     A,#-0x10
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 0
+     83          
+     84            //等待ADC转换完成
+     85                while(!(ADCCON1&0x80));
+   \                     ??Light_GetAdc_0:
+   \   000005   E5B4         MOV     A,0xb4
+   \   000007   A2E7         MOV     C,0xE0 /* A   */.7
+   \   000009   50FA         JNC     ??Light_GetAdc_0
+     86                
+     87                      //转换完毕指示
+     88                temp[1] = ADCL;
+   \   00000B   E5BA         MOV     A,0xba
+   \   00000D   90....       MOV     DPTR,#temp + 1
+   \   000010   F0           MOVX    @DPTR,A
+     89                temp[0] = ADCH;
+   \   000011   E5BB         MOV     A,0xbb
+   \   000013   90....       MOV     DPTR,#temp
+   \   000016   F0           MOVX    @DPTR,A
+     90                      
+     91                adc  =   (unsigned int)temp[1]>>5;
+     92                adc |= ( (unsigned int)temp[0] )<<3;
+   \   000017   A3           INC     DPTR
+   \   000018   E0           MOVX    A,@DPTR
+   \   000019   C4           SWAP    A
+   \   00001A   13           RRC     A
+   \   00001B   5407         ANL     A,#0x7
+   \   00001D   FA           MOV     R2,A
+   \   00001E   90....       MOV     DPTR,#temp
+   \   000021   E0           MOVX    A,@DPTR
+   \   000022   F5..         MOV     ?V0 + 0,A
+   \   000024   75..00       MOV     ?V0 + 1,#0x0
+   \   000027   7403         MOV     A,#0x3
+   \   000029   78..         MOV     R0,#?V0 + 0
+   \   00002B   12....       LCALL   ?S_SHL
+   \   00002E   EA           MOV     A,R2
+   \   00002F   45..         ORL     A,?V0 + 0
+   \   000031   90....       MOV     DPTR,#adc
+   \   000034   F0           MOVX    @DPTR,A
+   \   000035   A3           INC     DPTR
+   \   000036   E5..         MOV     A,?V0 + 1
+   \   000038   F0           MOVX    @DPTR,A
+     93                      
+     94                v = ((float)adc / (float)0x100);
+   \   000039   90....       MOV     DPTR,#adc
+   \   00003C   E0           MOVX    A,@DPTR
+   \   00003D   F5..         MOV     ?V0 + 0,A
+   \   00003F   E4           CLR     A
+   \   000040   F5..         MOV     ?V0 + 2,A
+   \   000042   F5..         MOV     ?V0 + 3,A
+   \   000044   78..         MOV     R0,#?V0 + 0
+   \   000046   12....       LCALL   ?UL_TO_FLT
+   \   000049   90....       MOV     DPTR,#__Constant_3b800000
+   \   00004C   78..         MOV     R0,#?V0 + 4
+   \   00004E   12....       LCALL   ?L_MOV_X
+   \   000051   78..         MOV     R0,#?V0 + 0
+   \   000053   79..         MOV     R1,#?V0 + 4
+   \   000055   12....       LCALL   ?FLT_MUL
+   \   000058   90....       MOV     DPTR,#v
+   \   00005B   78..         MOV     R0,#?V0 + 0
+   \   00005D   12....       LCALL   ?L_MOV_TO_X
+     95                adc_value= (unsigned char)(100-v*100);
+   \   000060   75..00       MOV     ?V0 + 0,#0x0
+   \   000063   75..00       MOV     ?V0 + 1,#0x0
+   \   000066   75..C8       MOV     ?V0 + 2,#-0x38
+   \   000069   C0..         PUSH    ?V0 + 0
+   \   00006B   C0..         PUSH    ?V0 + 1
+   \   00006D   C0..         PUSH    ?V0 + 2
+   \   00006F   90....       MOV     DPTR,#v
+   \   000072   78..         MOV     R0,#?V0 + 4
+   \   000074   12....       LCALL   ?L_MOV_X
+   \   000077   90....       MOV     DPTR,#__Constant_42c80000
+   \   00007A   78..         MOV     R0,#?V0 + 0
+   \   00007C   12....       LCALL   ?L_MOV_X
+   \   00007F   78..         MOV     R0,#?V0 + 4
+   \   000081   79..         MOV     R1,#?V0 + 0
+   \   000083   12....       LCALL   ?FLT_MUL
+   \   000086   75..42       MOV     ?V0 + 3,#0x42
+   \   000089   D0..         POP     ?V0 + 2
+   \   00008B   D0..         POP     ?V0 + 1
+   \   00008D   D0..         POP     ?V0 + 0
+   \   00008F   78..         MOV     R0,#?V0 + 0
+   \   000091   79..         MOV     R1,#?V0 + 4
+   \   000093   12....       LCALL   ?FLT_SUB
+   \   000096   78..         MOV     R0,#?V0 + 0
+   \   000098   12....       LCALL   ?FLT_TO_L
+   \   00009B   E5..         MOV     A,?V0 + 0
+   \   00009D   90....       MOV     DPTR,#adc_value
+   \   0000A0   F0           MOVX    @DPTR,A
+     96                                    
+     97                return adc_value;
+   \   0000A1   F9           MOV     R1,A
+   \   0000A2   7F08         MOV     R7,#0x8
+   \   0000A4   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   0000A7                REQUIRE ADCCON1
+   \   0000A7                REQUIRE ADCL
+   \   0000A7                REQUIRE ADCH
+     98                
+     99          }
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_3b800000:
+   \   000000   0000803B     DD 3B800000H
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_42c80000:
+   \   000000   0000C842     DD 42C80000H
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??InitialAD?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    InitialAD
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Light_GetAdc?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Light_GetAdc
+    100          
+    101                      //以6500为酒精0参考值
+    102                      //if(6500 >= adc)
+    103                     // {
+    104                    //      adc = 0;
+    105                    //  }
+    106                     // else
+    107                    //  {
+    108                    //      adc -= 6500;
+    109                     // }
+    110                      
+    111                      //转换成十进制：个十百千万
+    112                   //   wan  = ASCII[adc/10000];
+    113                   //   qian = ASCII[adc%10000/1000];
+    114                   //   bai  = ASCII[adc%1000/100];
+    115                   //   shi  = ASCII[adc%100/10];
+    116                   //   ge   = ASCII[adc%10];
+    117                      
+    118                      //adc显示
+    119                   //   loc(1,4);
+    120                  //    write_data(wan);
+    121                   //   write_data(qian);
+    122                   //   write_data(bai);
+    123                   //   write_data(shi);        
+    124                   //   write_data(ge);   
+    125                      
+    126                      //星号条显示
+    127                   //   adc  = adc/1320;
+    128                      
+    129                    //  loc(3,0);
+    130                    //  print_LCDdata("                ");//清除第三行内容
+    131                   //   loc(3,0);
+    132                  //    for(j = 0;j < adc; j++)
+    133                   //   {
+    134                   //       write_data('*');
+    135                   //   }
+    136                      
+    137                   //   led1 = ~led1;                       
+    138                   //   Delay(50000);  	
+    139               
+    140               
+    141           
+    142          
+    143          
+
+   Maximum stack usage in bytes:
+
+     Function     ISTACK PSTACK XSTACK
+     --------     ------ ------ ------
+     InitialAD        0      0      0
+     Light_GetAdc     4      0     16
+
+
+   Segment part sizes:
+
+     Function/Label       Bytes
+     --------------       -----
+     ADCCON1                 1
+     ADCCON3                 1
+     ADCL                    1
+     ADCH                    1
+     ADCCFG                  1
+     P0DIR                   1
+     temp                    2
+     adc                     2
+     adc_value               1
+     v                       4
+     InitialAD              23
+     Light_GetAdc          167
+     __Constant_3b800000     4
+     __Constant_42c80000     4
+     ??InitialAD?relay       6
+     ??Light_GetAdc?relay    6
+
+ 
+ 190 bytes in segment BANKED_CODE
+  12 bytes in segment BANK_RELAYS
+   6 bytes in segment SFR_AN
+   8 bytes in segment XDATA_ROM_C
+   9 bytes in segment XDATA_Z
+ 
+ 202 bytes of CODE  memory
+   0 bytes of CONST memory (+ 8 bytes shared)
+   0 bytes of DATA  memory (+ 6 bytes shared)
+   9 bytes of XDATA memory
+
+Errors: none
+Warnings: none
