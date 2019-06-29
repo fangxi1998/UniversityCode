@@ -14,3 +14,5 @@ for ch in ls1:
 for key,value in dic1.items():
     n=maxlen-len(key)
     print(' '*n,key,':','*'*value,value,sep='')
+
+    #注意注意注意
