@@ -1,9 +1,9 @@
-import re  
+import re
 tmp = input()  
 while(tmp != ''):  
-    if not re.search(u'^[_a-zA-Z0-9]+$',tmp):  
+    if not re.search('^[_a-zA-Z0-9]+$',tmp):  
         print ("False")  
-    elif not re.search(u'^[_a-zA-Z]+$',tmp[0]):  
+    elif not re.search('[_a-zA-Z]',tmp[0]):  
         print ("False")  
     else:  
         print ("True")  
