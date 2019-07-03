@@ -32,7 +32,10 @@ for v in range(n):
     
         t=t+1
         if sum4==sum3:
-           
+            sum1=0
+            sum2=0
+            sum3=0
+            sum4=0
             break
         sum1=0
         sum2=0
