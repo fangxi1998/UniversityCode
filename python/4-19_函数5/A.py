@@ -10,33 +10,23 @@ def  IsPrime(x):
             return 0
     return 1
 
-#判断素数函数
-
-
-def div(num):  
-    Snum=str(num)  
-    length=len(Snum)  
-    num_type=[]  
-    for i in range(length):  
-        number=int(Snum[i:]+Snum[:i])
-        
-        
-        num_type.append(number)  
+def div(num):
+    snum=str(num)
+    length=len(snum)
+    num_type=[]
+    for i in range(length):
+        number=int(snum[i:]+snum[:i])
+        num_type.append(number)
     return num_type
-#将数循环移位放到一个列表中
 
-
-n = int(input())
+n=int(input())
 count=0
 for i in range(2,n):
     flag=1
     for num in div(i):
-        if IsPrime(num)==0:
+        if not(IsPrime(num)):
             flag=0
             break
     if flag:
         count+=1
 print(count)
-            
-    
-
