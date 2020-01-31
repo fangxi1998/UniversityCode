@@ -12,5 +12,11 @@
 # esp
 > WIFIManualWebServer 是 通过 http请求 控制led的亮灭 
 > blinker_app_xiaoai 是通过 Blinker平台 实现 远端控制led的开关（MQTT协议以及wifi内网）并且 连接小爱同学语音控制
+# mqtt 
+> 基于mqtt协议 开发的远程遥控 esp-01s芯片 配合 继电器 实现 远程开灯 
+
+利用 PubSubClient 实现esp 开发板的mqtt协议开发
+利用mqtt client jar包开发安卓端 
+服务器 采用emqx 开发 
 # zigbee
 >两个zigbee路由节点采集数据 发送到协调节点 协调节点通过串口发给树莓派 树莓派与Android建立TCP连接 传输数据
